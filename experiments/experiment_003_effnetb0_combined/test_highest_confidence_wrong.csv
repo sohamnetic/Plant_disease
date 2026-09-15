@@ -1,0 +1,2 @@
+filepath,true_class,predicted_class,confidence
+dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (166).jpg,bacterial_spot_rot,downy_mildew,0.5006543397903442

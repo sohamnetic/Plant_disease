@@ -1,0 +1,11 @@
+filepath,true_class,predicted_class,confidence
+dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (166).jpg,bacterial_spot_rot,downy_mildew,0.5006543397903442
+dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (155).jpg,bacterial_spot_rot,bacterial_spot_rot,0.5323700308799744
+dataset/Original Dataset/Original Dataset/No disease/No disease. (4).jpeg,no_disease,no_disease,0.6080416440963745
+dataset/Original Dataset/Original Dataset/No disease/No disease. (18).jpeg,no_disease,no_disease,0.6535142064094543
+dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (79).jpg,bacterial_spot_rot,bacterial_spot_rot,0.7138714790344238
+dataset/Original Dataset/Original Dataset/No disease/No disease. (45).jpg,no_disease,no_disease,0.7459496855735779
+dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (98).jpg,bacterial_spot_rot,bacterial_spot_rot,0.7823529839515686
+dataset/Original Dataset/Original Dataset/Downy Mildew/Downy Mildew. (93).jpg,downy_mildew,downy_mildew,0.808403730392456
+dataset/Original Dataset/Original Dataset/Downy Mildew/Downy Mildew. (20).jpg,downy_mildew,downy_mildew,0.8122484683990479
+dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (76).jpg,bacterial_spot_rot,bacterial_spot_rot,0.8198208808898926

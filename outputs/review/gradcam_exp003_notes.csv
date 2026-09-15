@@ -1,0 +1,9 @@
+filepath,true_class,confidence,attention_focus,notes
+Bacterial Spot. (83).jpg,bacterial_spot_rot,0.523,symptom,Former Exp1 error (was downy). Now correct. CAM on dark mushy rot mass.
+Bacterial Spot. (55).jpg,bacterial_spot_rot,0.990,symptom,Heat on brown-red curd lesions; leaves unused.
+Black rot(28).jpeg,black_rot,0.912,symptom,Heat on necrotic holes/lesions; soil unused.
+Downy Mildew. (24).jpg,downy_mildew,0.994,symptom,Heat on chlorosis/holes; soil unused.
+No disease. (98).jpg,no_disease,0.994,shape_texture,Healthy curd texture; not borders.
+No disease. (16).jpg,no_disease,0.470,mixed,Former Exp1 error (was BSR). Now correct but low conf. Hottest on left wrapper leaf plus some lower-right curd.
+No disease. (15).jpg,no_disease,,mixed,Former Exp1 error; extra CAM. See overlay in former_exp001_errors/.
+No disease. (7).jpeg,no_disease,0.559,shape_framing,Leaf photo; heat on top leaf-soil edge not blade interior. Same weak no-disease cue as Exp1; not an aug-artifact pattern.

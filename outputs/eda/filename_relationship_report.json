@@ -1,0 +1,84 @@
+{
+  "per_class": {
+    "bacterial_spot_rot": {
+      "n_original": 173,
+      "n_augmented": 935,
+      "orig_num_min": 1,
+      "orig_num_max": 173,
+      "aug_num_min": 1,
+      "aug_num_max": 597,
+      "orig_unique_numbers": 173,
+      "aug_unique_numbers": 597,
+      "number_overlap_count": 173,
+      "orig_filename_patterns": {
+        "Bacterial Spot. (N).jpg": 173
+      },
+      "aug_filename_patterns": {
+        "BacterialSpotRot. (N).png": 597,
+        "Bacterial spot rot._ (N).png": 338
+      },
+      "ratio_aug_per_orig": 5.404624277456647
+    },
+    "black_rot": {
+      "n_original": 62,
+      "n_augmented": 766,
+      "orig_num_min": 2,
+      "orig_num_max": 63,
+      "aug_num_min": 1,
+      "aug_num_max": 522,
+      "orig_unique_numbers": 62,
+      "aug_unique_numbers": 522,
+      "number_overlap_count": 62,
+      "orig_filename_patterns": {
+        "Black rot(N).jpeg": 60,
+        "Black rot(N).jpg": 1,
+        "Black rot(N).jfif": 1
+      },
+      "aug_filename_patterns": {
+        "BlackRot. (N).png": 522,
+        "Black Rot. (N).png": 244
+      },
+      "ratio_aug_per_orig": 12.35483870967742
+    },
+    "downy_mildew": {
+      "n_original": 177,
+      "n_augmented": 921,
+      "orig_num_min": 1,
+      "orig_num_max": 146,
+      "aug_num_min": 1,
+      "aug_num_max": 609,
+      "orig_unique_numbers": 146,
+      "aug_unique_numbers": 609,
+      "number_overlap_count": 146,
+      "orig_filename_patterns": {
+        "Downy Mildew. (N).jpg": 146,
+        "Downy Mildew. (N).jpeg": 31
+      },
+      "aug_filename_patterns": {
+        "DownyMildew. (N).png": 609,
+        "Downy Mildew. (N).png": 312
+      },
+      "ratio_aug_per_orig": 5.203389830508475
+    },
+    "no_disease": {
+      "n_original": 206,
+      "n_augmented": 1041,
+      "orig_num_min": 1,
+      "orig_num_max": 188,
+      "aug_num_min": 1,
+      "aug_num_max": 1041,
+      "orig_unique_numbers": 188,
+      "aug_unique_numbers": 1041,
+      "number_overlap_count": 188,
+      "orig_filename_patterns": {
+        "No disease. (N).jpg": 188,
+        "No disease. (N).jpeg": 18
+      },
+      "aug_filename_patterns": {
+        "No disease(N).png": 1041
+      },
+      "ratio_aug_per_orig": 5.053398058252427
+    }
+  },
+  "conclusion": "Augmented filename numbers extend well beyond original counts (e.g. sequential IDs in the augmented folders), so filename numbers are NOT a safe original<->augmented join key. Grouping uses perceptual hashes (phash/dhash) plus exact MD5. Same-number original files with both .jpg and .jpeg are treated as possible duplicates and hashed."
+}

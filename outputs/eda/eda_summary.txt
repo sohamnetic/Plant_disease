@@ -1,0 +1,67 @@
+LEAF DISEASE DATASET — EDA SUMMARY
+Generated (UTC): 2026-09-06T05:44:20.535885+00:00
+Random seed: 42
+
+Class                 Original   Augmented   Total
+---------------------------------------------------
+bacterial_spot_rot         173         935     1108
+black_rot                   62         766      828
+downy_mildew               177         921     1098
+no_disease                 206        1041     1247
+Total                      618        3663     4281
+
+
+QUALITY COUNTS (flags only — nothing deleted or relabeled)
+  total_images: 4281
+  corrupt: 0
+  duplicates_exact_md5_groups: 11
+  near_duplicate_or_duplicate_groups: 172
+  images_in_multi_image_groups: 422
+  very_low_resolution: 0
+  extreme_brightness: 0
+  extreme_darkness: 0
+  blank_or_near_blank: 0
+  unusual_aspect_ratio: 0
+  non_rgb: 0
+  unsupported_format: 0
+  augmentation_artifact_suspect: 41
+  mixed_class_near_duplicate_groups: 3
+  orig_aug_paired_groups: 25
+  unmapped_class_files: 0
+  unknown_source_type: 0
+
+IMAGE SIZE
+  width 259–4032 (median 512.0)
+  height 194–4032 (median 512.0)
+  aspect 0.502–2.143 (median 1.000)
+  unique WxH: 195
+  modes: {'RGB': 4281}
+  extensions: {'.png': 3663, '.jpg': 508, '.jpeg': 109, '.jfif': 1}
+
+FILENAME vs HASH GROUPING
+  Augmented filename numbers extend well beyond original counts (e.g. sequential IDs in the augmented folders), so filename numbers are NOT a safe original<->augmented join key. Grouping uses perceptual hashes (phash/dhash) plus exact MD5. Same-number original files with both .jpg and .jpeg are treated as possible duplicates and hashed.
+  Multi-image groups: 172 (images in them: 422)
+  Original<->augmented paired groups: 25
+  Mixed-class groups (possible mislabels): 3
+
+SPLITS (group-aware, seed 42, CANONICAL)
+  train: 2997 images / 2778 groups
+    per class: {'bacterial_spot_rot': 776, 'black_rot': 580, 'downy_mildew': 768, 'no_disease': 873}
+    per source: {'augmented': 2565, 'original': 432}
+  val: 642 images / 624 groups
+    per class: {'bacterial_spot_rot': 166, 'black_rot': 124, 'downy_mildew': 165, 'no_disease': 187}
+    per source: {'augmented': 549, 'original': 93}
+  test: 642 images / 629 groups
+    per class: {'bacterial_spot_rot': 166, 'black_rot': 124, 'downy_mildew': 165, 'no_disease': 187}
+    per source: {'augmented': 549, 'original': 93}
+
+CLASS PROPORTIONS (%)
+  full: {'bacterial_spot_rot': 25.882, 'black_rot': 19.341, 'downy_mildew': 25.648, 'no_disease': 29.129}
+  train: {'bacterial_spot_rot': 25.893, 'black_rot': 19.353, 'downy_mildew': 25.626, 'no_disease': 29.129}
+  val: {'bacterial_spot_rot': 25.857, 'black_rot': 19.315, 'downy_mildew': 25.701, 'no_disease': 29.128}
+  test: {'bacterial_spot_rot': 25.857, 'black_rot': 19.315, 'downy_mildew': 25.701, 'no_disease': 29.128}
+ORIGINAL-ONLY COUNTS BY SPLIT
+  full n=618: {'bacterial_spot_rot': 173, 'black_rot': 62, 'downy_mildew': 177, 'no_disease': 206}
+  train n=432: {'bacterial_spot_rot': 121, 'black_rot': 44, 'downy_mildew': 123, 'no_disease': 144}
+  val n=93: {'bacterial_spot_rot': 26, 'black_rot': 9, 'downy_mildew': 27, 'no_disease': 31}
+  test n=93: {'bacterial_spot_rot': 26, 'black_rot': 9, 'downy_mildew': 27, 'no_disease': 31}

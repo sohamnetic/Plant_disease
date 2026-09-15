@@ -1,0 +1,24 @@
+# Dataset is local-only and must not be pushed
+dataset/
+dataset/**
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Tools / editor
+.cursor/
+.idea/
+.vscode/
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Generated inference dumps (keep review/final/eda)
+outputs/predictions/

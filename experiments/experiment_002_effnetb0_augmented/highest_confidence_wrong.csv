@@ -1,0 +1,2 @@
+filepath,true_class,predicted_class,confidence
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (185).png,downy_mildew,bacterial_spot_rot,0.44697242975234985

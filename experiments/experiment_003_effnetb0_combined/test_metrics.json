@@ -1,0 +1,70 @@
+{
+  "subset": "test_original",
+  "n": 93,
+  "accuracy": 0.989247311827957,
+  "macro_precision": 0.9910714285714286,
+  "macro_recall": 0.9903846153846154,
+  "macro_f1": 0.9905525846702318,
+  "weighted_f1": 0.9892396450271214,
+  "per_class": {
+    "bacterial_spot_rot": {
+      "precision": 1.0,
+      "recall": 0.9615384615384616,
+      "f1": 0.9803921568627451,
+      "support": 26
+    },
+    "black_rot": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 9
+    },
+    "downy_mildew": {
+      "precision": 0.9642857142857143,
+      "recall": 1.0,
+      "f1": 0.9818181818181818,
+      "support": 27
+    },
+    "no_disease": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 31
+    }
+  },
+  "confusion_matrix": [
+    [
+      25,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      9,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      27,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      31
+    ]
+  ],
+  "classification_report": "                    precision    recall  f1-score   support\n\nbacterial_spot_rot       1.00      0.96      0.98        26\n         black_rot       1.00      1.00      1.00         9\n      downy_mildew       0.96      1.00      0.98        27\n        no_disease       1.00      1.00      1.00        31\n\n          accuracy                           0.99        93\n         macro avg       0.99      0.99      0.99        93\n      weighted avg       0.99      0.99      0.99        93\n",
+  "n_wrong": 1,
+  "confidence": {
+    "min": 0.5006543397903442,
+    "max": 0.993205189704895,
+    "mean": 0.9084296854593421,
+    "median": 0.9342053532600403,
+    "n_below_0_60": 2
+  }
+}

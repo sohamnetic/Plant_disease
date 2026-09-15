@@ -1,0 +1,19 @@
+{
+  "total_images": 4281,
+  "corrupt": 0,
+  "duplicates_exact_md5_groups": 11,
+  "near_duplicate_or_duplicate_groups": 172,
+  "images_in_multi_image_groups": 422,
+  "very_low_resolution": 0,
+  "extreme_brightness": 0,
+  "extreme_darkness": 0,
+  "blank_or_near_blank": 0,
+  "unusual_aspect_ratio": 0,
+  "non_rgb": 0,
+  "unsupported_format": 0,
+  "augmentation_artifact_suspect": 41,
+  "mixed_class_near_duplicate_groups": 3,
+  "orig_aug_paired_groups": 25,
+  "unmapped_class_files": 0,
+  "unknown_source_type": 0
+}

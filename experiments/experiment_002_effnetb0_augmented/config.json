@@ -1,0 +1,30 @@
+{
+  "experiment": "experiment_002_effnetb0_augmented",
+  "model": "efficientnet_b0",
+  "weights": "IMAGENET1K_V1",
+  "classes": [
+    "bacterial_spot_rot",
+    "black_rot",
+    "downy_mildew",
+    "no_disease"
+  ],
+  "source_filter": "augmented",
+  "seed": 42,
+  "cuda": true,
+  "device": "cuda",
+  "batch_size": 32,
+  "dropout": 0.4,
+  "label_smoothing": 0.1,
+  "class_weights": null,
+  "stage1_epochs": 8,
+  "stage2_max_epochs": 25,
+  "early_stop_patience": 8,
+  "head_lr_stage1": 0.001,
+  "backbone_lr_stage2": 1e-05,
+  "head_lr_stage2": 0.0001,
+  "weight_decay": 0.0001,
+  "checkpoint_metric": "val_macro_f1",
+  "created_utc": "2026-09-06T07:28:52.650652+00:00",
+  "notes": "Same methodology as exp001. Do not evaluate test.csv. Splits not regenerated.",
+  "comparison_baseline": "experiment_001_effnetb0_original val macro-F1 0.973"
+}

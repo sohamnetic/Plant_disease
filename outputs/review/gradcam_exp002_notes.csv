@@ -1,0 +1,14 @@
+filepath,true_class,confidence,attention_focus,artifact_cam,notes
+BacterialSpotRot (135).png,bacterial_spot_rot,0.991,symptom,no,Heat on spotted curd; leaves unused.
+Bacterial spot rot._ (334).png,bacterial_spot_rot,0.593,symptom,near,Heat on reddish-brown curd near a small black triangle; peak is on tissue not the triangle.
+BacterialSpotRot (4).png,bacterial_spot_rot,0.472,symptom,no,Top-right smear ignored; CAM on brown-purple curd.
+BacterialSpotRot (258).png,bacterial_spot_rot,0.539,symptom,no,Black corner triangles unused; CAM on rotting curd.
+Black Rot (94).png,black_rot,0.986,symptom,no,Lesions/holes on leaf; soil unused.
+BlackRot (353).png,black_rot,0.819,symptom,no,Rotated with black triangles; CAM on central necrotic lesion, corners blue.
+Black Rot (26).png,black_rot,0.825,symptom,no,Four black rotation triangles unused; CAM on necrotic tissue.
+DownyMildew (532).png,downy_mildew,0.991,symptom,no,Right-edge smear unused; CAM on necrotic/chlorotic cluster.
+DownyMildew (131).png,downy_mildew,0.424,symptom,no,Heat on yellow-brown spots; soil unused.
+DownyMildew (42).png,downy_mildew,0.652,mixed_artifact,yes,CAM includes top-right border-smear plus a healthy-looking leaf; under-weights the central chlorotic leaf. Clear artifact-attention case.
+No disease(206).png,no_disease,0.994,shape_texture,no,Healthy curd texture; not corners.
+No disease(35).png,no_disease,0.559,shape_texture,no,Heat on white floret surface.
+No disease(1022).png,no_disease,0.826,shape_texture,no,Bottom smear unused; CAM on healthy curd.

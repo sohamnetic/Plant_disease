@@ -1,0 +1,11 @@
+filepath,true_class,predicted_class,confidence
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (131).png,downy_mildew,downy_mildew,0.4242243766784668
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (185).png,downy_mildew,bacterial_spot_rot,0.44697242975234985
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (4).png,bacterial_spot_rot,bacterial_spot_rot,0.47171416878700256
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (258).png,bacterial_spot_rot,bacterial_spot_rot,0.5388194918632507
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(35).png,no_disease,no_disease,0.559304416179657
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (334).png,bacterial_spot_rot,bacterial_spot_rot,0.5929889678955078
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (537).png,bacterial_spot_rot,bacterial_spot_rot,0.6107186675071716
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (421).png,bacterial_spot_rot,bacterial_spot_rot,0.6271802186965942
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (405).png,downy_mildew,downy_mildew,0.6291613578796387
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (132).png,bacterial_spot_rot,bacterial_spot_rot,0.6339750289916992

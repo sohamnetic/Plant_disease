@@ -1,0 +1,53 @@
+{
+  "experiment": "experiment_003_effnetb0_combined",
+  "model": "efficientnet_b0",
+  "weights": "IMAGENET1K_V1",
+  "classes": [
+    "bacterial_spot_rot",
+    "black_rot",
+    "downy_mildew",
+    "no_disease"
+  ],
+  "source_filter_train": "original+augmented",
+  "source_filter_val": "original",
+  "seed": 42,
+  "cuda": true,
+  "device": "cuda",
+  "batch_size": 32,
+  "dropout": 0.4,
+  "label_smoothing": 0.1,
+  "class_weights": null,
+  "stage1_epochs": 8,
+  "stage2_max_epochs": 25,
+  "early_stop_patience": 8,
+  "head_lr_stage1": 0.001,
+  "backbone_lr_stage2": 1e-05,
+  "head_lr_stage2": 0.0001,
+  "weight_decay": 0.0001,
+  "checkpoint_metric": "val_macro_f1_original_only",
+  "created_utc": "2026-09-06T08:13:20.021970+00:00",
+  "notes": "Train combined, validate original-only. Do not evaluate test.csv.",
+  "comparison_baseline": "experiment_001_effnetb0_original val macro-F1 0.973",
+  "train_balance": {
+    "bacterial_spot_rot": {
+      "original": 121,
+      "augmented": 655,
+      "total": 776
+    },
+    "black_rot": {
+      "original": 44,
+      "augmented": 536,
+      "total": 580
+    },
+    "downy_mildew": {
+      "original": 123,
+      "augmented": 645,
+      "total": 768
+    },
+    "no_disease": {
+      "original": 144,
+      "augmented": 729,
+      "total": 873
+    }
+  }
+}

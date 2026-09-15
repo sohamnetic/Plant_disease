@@ -1,0 +1,13 @@
+true,pred,count
+no_disease,bacterial_spot_rot,2
+bacterial_spot_rot,downy_mildew,1
+bacterial_spot_rot,black_rot,0
+bacterial_spot_rot,no_disease,0
+black_rot,bacterial_spot_rot,0
+black_rot,downy_mildew,0
+black_rot,no_disease,0
+downy_mildew,bacterial_spot_rot,0
+downy_mildew,black_rot,0
+downy_mildew,no_disease,0
+no_disease,black_rot,0
+no_disease,downy_mildew,0

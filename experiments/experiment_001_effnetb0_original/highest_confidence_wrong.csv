@@ -1,0 +1,4 @@
+filepath,true_class,predicted_class,confidence
+dataset/Original Dataset/Original Dataset/No disease/No disease. (16).jpg,no_disease,bacterial_spot_rot,0.6976706385612488
+dataset/Original Dataset/Original Dataset/No disease/No disease. (15).jpg,no_disease,bacterial_spot_rot,0.6310440301895142
+dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (83).jpg,bacterial_spot_rot,downy_mildew,0.4491567611694336

@@ -1,0 +1,550 @@
+filepath,true_class,predicted_class,confidence
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (106).png,bacterial_spot_rot,bacterial_spot_rot,0.8690457940101624
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (111).png,bacterial_spot_rot,bacterial_spot_rot,0.9464569687843323
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (122).png,bacterial_spot_rot,bacterial_spot_rot,0.9760480523109436
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (123).png,bacterial_spot_rot,bacterial_spot_rot,0.7493382096290588
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (132).png,bacterial_spot_rot,bacterial_spot_rot,0.6339750289916992
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (133).png,bacterial_spot_rot,bacterial_spot_rot,0.9759920835494995
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (141).png,bacterial_spot_rot,bacterial_spot_rot,0.9587953686714172
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (142).png,bacterial_spot_rot,bacterial_spot_rot,0.9864441752433777
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (146).png,bacterial_spot_rot,bacterial_spot_rot,0.9825642704963684
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (163).png,bacterial_spot_rot,bacterial_spot_rot,0.9871159195899963
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (178).png,bacterial_spot_rot,bacterial_spot_rot,0.9841933846473694
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (185).png,bacterial_spot_rot,bacterial_spot_rot,0.9161556363105774
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (192).png,bacterial_spot_rot,bacterial_spot_rot,0.9105675220489502
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (2).png,bacterial_spot_rot,bacterial_spot_rot,0.9502694606781006
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (202).png,bacterial_spot_rot,bacterial_spot_rot,0.9688708782196045
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (210).png,bacterial_spot_rot,bacterial_spot_rot,0.9466241002082825
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (213).png,bacterial_spot_rot,bacterial_spot_rot,0.980634331703186
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (223).png,bacterial_spot_rot,bacterial_spot_rot,0.8805636167526245
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (227).png,bacterial_spot_rot,bacterial_spot_rot,0.9085395932197571
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (234).png,bacterial_spot_rot,bacterial_spot_rot,0.9351231455802917
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (235).png,bacterial_spot_rot,bacterial_spot_rot,0.9348440170288086
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (244).png,bacterial_spot_rot,bacterial_spot_rot,0.9529080986976624
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (245).png,bacterial_spot_rot,bacterial_spot_rot,0.9880091547966003
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (249).png,bacterial_spot_rot,bacterial_spot_rot,0.9553186297416687
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (252).png,bacterial_spot_rot,bacterial_spot_rot,0.9853023290634155
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (253).png,bacterial_spot_rot,bacterial_spot_rot,0.9182133674621582
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (264).png,bacterial_spot_rot,bacterial_spot_rot,0.9618245959281921
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (267).png,bacterial_spot_rot,bacterial_spot_rot,0.9368252754211426
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (277).png,bacterial_spot_rot,bacterial_spot_rot,0.9661704897880554
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (28).png,bacterial_spot_rot,bacterial_spot_rot,0.9392223358154297
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (284).png,bacterial_spot_rot,bacterial_spot_rot,0.9475743174552917
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (285).png,bacterial_spot_rot,bacterial_spot_rot,0.9507283568382263
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (286).png,bacterial_spot_rot,bacterial_spot_rot,0.9231173992156982
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (292).png,bacterial_spot_rot,bacterial_spot_rot,0.9478299617767334
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (316).png,bacterial_spot_rot,bacterial_spot_rot,0.9675298929214478
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (317).png,bacterial_spot_rot,bacterial_spot_rot,0.9432501196861267
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (318).png,bacterial_spot_rot,bacterial_spot_rot,0.899438738822937
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (320).png,bacterial_spot_rot,bacterial_spot_rot,0.9745573997497559
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (326).png,bacterial_spot_rot,bacterial_spot_rot,0.9338838458061218
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (334).png,bacterial_spot_rot,bacterial_spot_rot,0.5929889678955078
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (43).png,bacterial_spot_rot,bacterial_spot_rot,0.9370235800743103
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (5).png,bacterial_spot_rot,bacterial_spot_rot,0.9348742365837097
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (53).png,bacterial_spot_rot,bacterial_spot_rot,0.8782476782798767
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (54).png,bacterial_spot_rot,bacterial_spot_rot,0.8436736464500427
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (59).png,bacterial_spot_rot,bacterial_spot_rot,0.9131299257278442
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/Bacterial spot rot._ (67).png,bacterial_spot_rot,bacterial_spot_rot,0.9447129368782043
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (103).png,bacterial_spot_rot,bacterial_spot_rot,0.8042028546333313
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (105).png,bacterial_spot_rot,bacterial_spot_rot,0.7969542145729065
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (109).png,bacterial_spot_rot,bacterial_spot_rot,0.9135454297065735
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (11).png,bacterial_spot_rot,bacterial_spot_rot,0.9533289074897766
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (115).png,bacterial_spot_rot,bacterial_spot_rot,0.9679876565933228
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (126).png,bacterial_spot_rot,bacterial_spot_rot,0.9365306496620178
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (130).png,bacterial_spot_rot,bacterial_spot_rot,0.9600017070770264
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (135).png,bacterial_spot_rot,bacterial_spot_rot,0.9914728403091431
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (149).png,bacterial_spot_rot,bacterial_spot_rot,0.9748696684837341
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (158).png,bacterial_spot_rot,bacterial_spot_rot,0.9186965227127075
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (16).png,bacterial_spot_rot,bacterial_spot_rot,0.6601055860519409
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (164).png,bacterial_spot_rot,bacterial_spot_rot,0.9705712795257568
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (196).png,bacterial_spot_rot,bacterial_spot_rot,0.9659208059310913
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (198).png,bacterial_spot_rot,bacterial_spot_rot,0.9759656190872192
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (205).png,bacterial_spot_rot,bacterial_spot_rot,0.936013400554657
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (212).png,bacterial_spot_rot,bacterial_spot_rot,0.9324295520782471
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (213).png,bacterial_spot_rot,bacterial_spot_rot,0.9049139022827148
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (221).png,bacterial_spot_rot,bacterial_spot_rot,0.9425041079521179
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (24).png,bacterial_spot_rot,bacterial_spot_rot,0.939696192741394
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (240).png,bacterial_spot_rot,bacterial_spot_rot,0.9860612154006958
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (243).png,bacterial_spot_rot,bacterial_spot_rot,0.9883434772491455
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (258).png,bacterial_spot_rot,bacterial_spot_rot,0.5388194918632507
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (259).png,bacterial_spot_rot,bacterial_spot_rot,0.9006779193878174
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (26).png,bacterial_spot_rot,bacterial_spot_rot,0.8736615180969238
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (264).png,bacterial_spot_rot,bacterial_spot_rot,0.9598839282989502
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (266).png,bacterial_spot_rot,bacterial_spot_rot,0.9308027029037476
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (269).png,bacterial_spot_rot,bacterial_spot_rot,0.9912746548652649
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (272).png,bacterial_spot_rot,bacterial_spot_rot,0.9796066880226135
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (304).png,bacterial_spot_rot,bacterial_spot_rot,0.9513756036758423
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (308).png,bacterial_spot_rot,bacterial_spot_rot,0.9795570373535156
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (309).png,bacterial_spot_rot,bacterial_spot_rot,0.9782084822654724
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (316).png,bacterial_spot_rot,bacterial_spot_rot,0.9624714851379395
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (328).png,bacterial_spot_rot,bacterial_spot_rot,0.7743126749992371
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (340).png,bacterial_spot_rot,bacterial_spot_rot,0.9688463807106018
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (344).png,bacterial_spot_rot,bacterial_spot_rot,0.9653684496879578
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (347).png,bacterial_spot_rot,bacterial_spot_rot,0.9473302960395813
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (348).png,bacterial_spot_rot,bacterial_spot_rot,0.9342670440673828
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (35).png,bacterial_spot_rot,bacterial_spot_rot,0.9525153040885925
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (353).png,bacterial_spot_rot,bacterial_spot_rot,0.8559951782226562
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (359).png,bacterial_spot_rot,bacterial_spot_rot,0.9697428345680237
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (366).png,bacterial_spot_rot,bacterial_spot_rot,0.9707004427909851
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (379).png,bacterial_spot_rot,bacterial_spot_rot,0.9439722895622253
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (381).png,bacterial_spot_rot,bacterial_spot_rot,0.9390398263931274
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (384).png,bacterial_spot_rot,bacterial_spot_rot,0.9162700176239014
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (385).png,bacterial_spot_rot,bacterial_spot_rot,0.9708446860313416
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (386).png,bacterial_spot_rot,bacterial_spot_rot,0.8634737133979797
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (387).png,bacterial_spot_rot,bacterial_spot_rot,0.9599786996841431
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (39).png,bacterial_spot_rot,bacterial_spot_rot,0.9633244276046753
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (4).png,bacterial_spot_rot,bacterial_spot_rot,0.47171416878700256
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (401).png,bacterial_spot_rot,bacterial_spot_rot,0.9630469679832458
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (403).png,bacterial_spot_rot,bacterial_spot_rot,0.9833858609199524
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (419).png,bacterial_spot_rot,bacterial_spot_rot,0.975867509841919
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (421).png,bacterial_spot_rot,bacterial_spot_rot,0.6271802186965942
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (426).png,bacterial_spot_rot,bacterial_spot_rot,0.8730926513671875
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (430).png,bacterial_spot_rot,bacterial_spot_rot,0.9802272319793701
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (433).png,bacterial_spot_rot,bacterial_spot_rot,0.9460734128952026
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (435).png,bacterial_spot_rot,bacterial_spot_rot,0.9855904579162598
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (438).png,bacterial_spot_rot,bacterial_spot_rot,0.8760495185852051
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (442).png,bacterial_spot_rot,bacterial_spot_rot,0.8569128513336182
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (451).png,bacterial_spot_rot,bacterial_spot_rot,0.9749991297721863
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (452).png,bacterial_spot_rot,bacterial_spot_rot,0.9526143074035645
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (47).png,bacterial_spot_rot,bacterial_spot_rot,0.9695531725883484
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (473).png,bacterial_spot_rot,bacterial_spot_rot,0.9303932785987854
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (483).png,bacterial_spot_rot,bacterial_spot_rot,0.9415591955184937
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (484).png,bacterial_spot_rot,bacterial_spot_rot,0.9553244113922119
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (485).png,bacterial_spot_rot,bacterial_spot_rot,0.938014805316925
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (49).png,bacterial_spot_rot,bacterial_spot_rot,0.9814404249191284
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (490).png,bacterial_spot_rot,bacterial_spot_rot,0.9552059173583984
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (493).png,bacterial_spot_rot,bacterial_spot_rot,0.9752110242843628
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (494).png,bacterial_spot_rot,bacterial_spot_rot,0.9501208066940308
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (530).png,bacterial_spot_rot,bacterial_spot_rot,0.9683563709259033
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (535).png,bacterial_spot_rot,bacterial_spot_rot,0.9623811841011047
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (536).png,bacterial_spot_rot,bacterial_spot_rot,0.952192485332489
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (537).png,bacterial_spot_rot,bacterial_spot_rot,0.6107186675071716
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (54).png,bacterial_spot_rot,bacterial_spot_rot,0.9815047383308411
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (545).png,bacterial_spot_rot,bacterial_spot_rot,0.9714037775993347
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (550).png,bacterial_spot_rot,bacterial_spot_rot,0.9006794691085815
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (559).png,bacterial_spot_rot,bacterial_spot_rot,0.9737894535064697
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (560).png,bacterial_spot_rot,bacterial_spot_rot,0.9709926247596741
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (568).png,bacterial_spot_rot,bacterial_spot_rot,0.9682115316390991
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (577).png,bacterial_spot_rot,bacterial_spot_rot,0.8854004740715027
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (578).png,bacterial_spot_rot,bacterial_spot_rot,0.9357637166976929
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (582).png,bacterial_spot_rot,bacterial_spot_rot,0.967322587966919
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (585).png,bacterial_spot_rot,bacterial_spot_rot,0.7688231468200684
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (591).png,bacterial_spot_rot,bacterial_spot_rot,0.9213501214981079
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (594).png,bacterial_spot_rot,bacterial_spot_rot,0.9419348239898682
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (595).png,bacterial_spot_rot,bacterial_spot_rot,0.9571104645729065
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (596).png,bacterial_spot_rot,bacterial_spot_rot,0.8854010105133057
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (61).png,bacterial_spot_rot,bacterial_spot_rot,0.9325084090232849
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (80).png,bacterial_spot_rot,bacterial_spot_rot,0.9405736923217773
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (81).png,bacterial_spot_rot,bacterial_spot_rot,0.9648659229278564
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (82).png,bacterial_spot_rot,bacterial_spot_rot,0.7662297487258911
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (83).png,bacterial_spot_rot,bacterial_spot_rot,0.8924062252044678
+dataset/Augmented Dataset/Augmented Dataset/Bacterial spot rot/BacterialSpotRot. (97).png,bacterial_spot_rot,bacterial_spot_rot,0.84849613904953
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (1).png,black_rot,black_rot,0.9716103672981262
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (102).png,black_rot,black_rot,0.9632081985473633
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (104).png,black_rot,black_rot,0.9689984321594238
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (107).png,black_rot,black_rot,0.9749124646186829
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (11).png,black_rot,black_rot,0.9635838270187378
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (113).png,black_rot,black_rot,0.9492874145507812
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (120).png,black_rot,black_rot,0.8681067824363708
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (134).png,black_rot,black_rot,0.9432470202445984
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (159).png,black_rot,black_rot,0.8857514262199402
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (161).png,black_rot,black_rot,0.9527583122253418
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (181).png,black_rot,black_rot,0.9661892652511597
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (182).png,black_rot,black_rot,0.9384902715682983
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (190).png,black_rot,black_rot,0.983308732509613
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (199).png,black_rot,black_rot,0.933609664440155
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (201).png,black_rot,black_rot,0.979098916053772
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (205).png,black_rot,black_rot,0.9123193621635437
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (206).png,black_rot,black_rot,0.9644718766212463
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (211).png,black_rot,black_rot,0.9767860174179077
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (220).png,black_rot,black_rot,0.952424168586731
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (221).png,black_rot,black_rot,0.9715656042098999
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (228).png,black_rot,black_rot,0.9333235025405884
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (235).png,black_rot,black_rot,0.9652705192565918
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (237).png,black_rot,black_rot,0.9001314640045166
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (243).png,black_rot,black_rot,0.958616316318512
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (26).png,black_rot,black_rot,0.8249679207801819
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (27).png,black_rot,black_rot,0.9590771794319153
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (43).png,black_rot,black_rot,0.9024447202682495
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (45).png,black_rot,black_rot,0.8886441588401794
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (46).png,black_rot,black_rot,0.9613908529281616
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (47).png,black_rot,black_rot,0.9485141634941101
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (61).png,black_rot,black_rot,0.9419041872024536
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (65).png,black_rot,black_rot,0.9709265232086182
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (68).png,black_rot,black_rot,0.978408694267273
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (77).png,black_rot,black_rot,0.9532643556594849
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (78).png,black_rot,black_rot,0.9799656867980957
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (8).png,black_rot,black_rot,0.969801127910614
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (9).png,black_rot,black_rot,0.9598676562309265
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (90).png,black_rot,black_rot,0.9353698492050171
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/Black Rot. (94).png,black_rot,black_rot,0.9863033890724182
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (102).png,black_rot,black_rot,0.9387761354446411
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (118).png,black_rot,black_rot,0.967965304851532
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (134).png,black_rot,black_rot,0.9374220967292786
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (173).png,black_rot,black_rot,0.930252194404602
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (18).png,black_rot,black_rot,0.9708911180496216
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (188).png,black_rot,black_rot,0.9216862916946411
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (192).png,black_rot,black_rot,0.9458264708518982
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (195).png,black_rot,black_rot,0.9409151077270508
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (198).png,black_rot,black_rot,0.9670803546905518
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (205).png,black_rot,black_rot,0.9602282643318176
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (225).png,black_rot,black_rot,0.9556246399879456
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (231).png,black_rot,black_rot,0.8342698812484741
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (237).png,black_rot,black_rot,0.9260469079017639
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (239).png,black_rot,black_rot,0.9354099631309509
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (256).png,black_rot,black_rot,0.9355831742286682
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (263).png,black_rot,black_rot,0.9358169436454773
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (268).png,black_rot,black_rot,0.9766245484352112
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (273).png,black_rot,black_rot,0.9808618426322937
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (28).png,black_rot,black_rot,0.9675451517105103
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (284).png,black_rot,black_rot,0.9572945237159729
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (289).png,black_rot,black_rot,0.9182054996490479
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (294).png,black_rot,black_rot,0.9405845403671265
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (310).png,black_rot,black_rot,0.9787768721580505
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (320).png,black_rot,black_rot,0.9201923608779907
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (325).png,black_rot,black_rot,0.9674149751663208
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (328).png,black_rot,black_rot,0.948091447353363
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (33).png,black_rot,black_rot,0.9668350219726562
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (330).png,black_rot,black_rot,0.969872772693634
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (331).png,black_rot,black_rot,0.9551970362663269
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (336).png,black_rot,black_rot,0.9288901090621948
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (339).png,black_rot,black_rot,0.8910685181617737
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (347).png,black_rot,black_rot,0.9646989107131958
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (353).png,black_rot,black_rot,0.8188210725784302
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (354).png,black_rot,black_rot,0.9337019324302673
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (356).png,black_rot,black_rot,0.9061354398727417
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (358).png,black_rot,black_rot,0.9306166172027588
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (359).png,black_rot,black_rot,0.9793333411216736
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (363).png,black_rot,black_rot,0.9106436371803284
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (365).png,black_rot,black_rot,0.9625007510185242
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (366).png,black_rot,black_rot,0.9364309310913086
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (367).png,black_rot,black_rot,0.9545947313308716
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (374).png,black_rot,black_rot,0.9802244305610657
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (376).png,black_rot,black_rot,0.9495648741722107
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (379).png,black_rot,black_rot,0.934149444103241
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (380).png,black_rot,black_rot,0.9815682768821716
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (381).png,black_rot,black_rot,0.9713475704193115
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (389).png,black_rot,black_rot,0.9209615588188171
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (401).png,black_rot,black_rot,0.934012770652771
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (412).png,black_rot,black_rot,0.9296392202377319
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (422).png,black_rot,black_rot,0.9651616811752319
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (433).png,black_rot,black_rot,0.9535121321678162
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (437).png,black_rot,black_rot,0.9768542647361755
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (442).png,black_rot,black_rot,0.9595003128051758
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (443).png,black_rot,black_rot,0.9701687693595886
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (450).png,black_rot,black_rot,0.9828009605407715
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (452).png,black_rot,black_rot,0.9698553681373596
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (454).png,black_rot,black_rot,0.9028782844543457
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (459).png,black_rot,black_rot,0.9763308167457581
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (463).png,black_rot,black_rot,0.9576970338821411
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (470).png,black_rot,black_rot,0.9245607256889343
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (474).png,black_rot,black_rot,0.9743836522102356
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (481).png,black_rot,black_rot,0.981417715549469
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (489).png,black_rot,black_rot,0.9461662769317627
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (494).png,black_rot,black_rot,0.948943018913269
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (506).png,black_rot,black_rot,0.9792846441268921
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (507).png,black_rot,black_rot,0.9582467675209045
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (521).png,black_rot,black_rot,0.9712047576904297
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (522).png,black_rot,black_rot,0.9628782868385315
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (56).png,black_rot,black_rot,0.9642171263694763
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (63).png,black_rot,black_rot,0.9524052143096924
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (66).png,black_rot,black_rot,0.9685796499252319
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (67).png,black_rot,black_rot,0.9156001806259155
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (8).png,black_rot,black_rot,0.9589389562606812
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (88).png,black_rot,black_rot,0.8885612487792969
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (96).png,black_rot,black_rot,0.9397024512290955
+dataset/Augmented Dataset/Augmented Dataset/Black Rot/BlackRot. (99).png,black_rot,black_rot,0.9547475576400757
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (113).png,downy_mildew,downy_mildew,0.941444993019104
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (124).png,downy_mildew,downy_mildew,0.9266466498374939
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (131).png,downy_mildew,downy_mildew,0.9672214388847351
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (134).png,downy_mildew,downy_mildew,0.9590187668800354
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (153).png,downy_mildew,downy_mildew,0.9491294026374817
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (162).png,downy_mildew,downy_mildew,0.954289436340332
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (169).png,downy_mildew,downy_mildew,0.9293588995933533
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (171).png,downy_mildew,downy_mildew,0.937847375869751
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (179).png,downy_mildew,downy_mildew,0.9473344683647156
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (184).png,downy_mildew,downy_mildew,0.9283119440078735
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (19).png,downy_mildew,downy_mildew,0.8496277332305908
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (205).png,downy_mildew,downy_mildew,0.9759924411773682
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (21).png,downy_mildew,downy_mildew,0.9058266878128052
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (213).png,downy_mildew,downy_mildew,0.9511196613311768
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (217).png,downy_mildew,downy_mildew,0.9560235738754272
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (230).png,downy_mildew,downy_mildew,0.9357708096504211
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (232).png,downy_mildew,downy_mildew,0.9113742113113403
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (236).png,downy_mildew,downy_mildew,0.9784095883369446
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (238).png,downy_mildew,downy_mildew,0.8490403890609741
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (241).png,downy_mildew,downy_mildew,0.9096076488494873
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (25).png,downy_mildew,downy_mildew,0.9322994947433472
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (260).png,downy_mildew,downy_mildew,0.8272838592529297
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (266).png,downy_mildew,downy_mildew,0.9678216576576233
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (267).png,downy_mildew,downy_mildew,0.9633249044418335
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (268).png,downy_mildew,downy_mildew,0.9697521328926086
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (284).png,downy_mildew,downy_mildew,0.9417456388473511
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (286).png,downy_mildew,downy_mildew,0.9071018695831299
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (288).png,downy_mildew,downy_mildew,0.8835049867630005
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (292).png,downy_mildew,downy_mildew,0.9392755627632141
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (308).png,downy_mildew,downy_mildew,0.9284265637397766
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (312).png,downy_mildew,downy_mildew,0.9723404049873352
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (45).png,downy_mildew,downy_mildew,0.9385364651679993
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (58).png,downy_mildew,downy_mildew,0.9745948910713196
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (61).png,downy_mildew,downy_mildew,0.8567214608192444
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (67).png,downy_mildew,downy_mildew,0.9507523775100708
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (72).png,downy_mildew,downy_mildew,0.8634323477745056
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (75).png,downy_mildew,downy_mildew,0.8257145285606384
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (77).png,downy_mildew,downy_mildew,0.7152469158172607
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (80).png,downy_mildew,downy_mildew,0.8499478697776794
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (85).png,downy_mildew,downy_mildew,0.8782321214675903
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (92).png,downy_mildew,downy_mildew,0.9617601037025452
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (94).png,downy_mildew,downy_mildew,0.8821585774421692
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (97).png,downy_mildew,downy_mildew,0.9886483550071716
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (10).png,downy_mildew,downy_mildew,0.8288464546203613
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (100).png,downy_mildew,downy_mildew,0.8714982271194458
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (105).png,downy_mildew,downy_mildew,0.90650874376297
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (112).png,downy_mildew,downy_mildew,0.940241277217865
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (12).png,downy_mildew,downy_mildew,0.8474207520484924
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (121).png,downy_mildew,downy_mildew,0.9554880261421204
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (123).png,downy_mildew,downy_mildew,0.9307720065116882
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (128).png,downy_mildew,downy_mildew,0.6764455437660217
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (131).png,downy_mildew,downy_mildew,0.4242243766784668
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (135).png,downy_mildew,downy_mildew,0.8426087498664856
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (138).png,downy_mildew,downy_mildew,0.8455394506454468
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (143).png,downy_mildew,downy_mildew,0.9342399835586548
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (144).png,downy_mildew,downy_mildew,0.9553180932998657
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (150).png,downy_mildew,downy_mildew,0.8182264566421509
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (151).png,downy_mildew,downy_mildew,0.7745128870010376
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (161).png,downy_mildew,downy_mildew,0.9774569869041443
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (164).png,downy_mildew,downy_mildew,0.9715290069580078
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (172).png,downy_mildew,downy_mildew,0.7081589698791504
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (185).png,downy_mildew,bacterial_spot_rot,0.44697242975234985
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (190).png,downy_mildew,downy_mildew,0.9816996455192566
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (198).png,downy_mildew,downy_mildew,0.9016644358634949
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (199).png,downy_mildew,downy_mildew,0.8897505402565002
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (20).png,downy_mildew,downy_mildew,0.9794517755508423
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (204).png,downy_mildew,downy_mildew,0.9650296568870544
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (207).png,downy_mildew,downy_mildew,0.9908080697059631
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (218).png,downy_mildew,downy_mildew,0.851005494594574
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (226).png,downy_mildew,downy_mildew,0.9637282490730286
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (231).png,downy_mildew,downy_mildew,0.9792790412902832
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (25).png,downy_mildew,downy_mildew,0.8979974389076233
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (270).png,downy_mildew,downy_mildew,0.8934218883514404
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (280).png,downy_mildew,downy_mildew,0.9043176770210266
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (283).png,downy_mildew,downy_mildew,0.947026789188385
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (284).png,downy_mildew,downy_mildew,0.8361708521842957
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (285).png,downy_mildew,downy_mildew,0.9358130097389221
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (286).png,downy_mildew,downy_mildew,0.9203339219093323
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (30).png,downy_mildew,downy_mildew,0.8720403909683228
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (302).png,downy_mildew,downy_mildew,0.9025892019271851
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (31).png,downy_mildew,downy_mildew,0.8948461413383484
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (331).png,downy_mildew,downy_mildew,0.9901310205459595
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (335).png,downy_mildew,downy_mildew,0.8254818320274353
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (340).png,downy_mildew,downy_mildew,0.7852885127067566
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (35).png,downy_mildew,downy_mildew,0.802679717540741
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (358).png,downy_mildew,downy_mildew,0.9617820382118225
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (361).png,downy_mildew,downy_mildew,0.9334260821342468
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (366).png,downy_mildew,downy_mildew,0.8330771327018738
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (371).png,downy_mildew,downy_mildew,0.8822263479232788
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (388).png,downy_mildew,downy_mildew,0.8257084488868713
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (392).png,downy_mildew,downy_mildew,0.8784759640693665
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (399).png,downy_mildew,downy_mildew,0.9546893239021301
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (405).png,downy_mildew,downy_mildew,0.6291613578796387
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (42).png,downy_mildew,downy_mildew,0.652301013469696
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (420).png,downy_mildew,downy_mildew,0.8658230304718018
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (426).png,downy_mildew,downy_mildew,0.8050297498703003
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (427).png,downy_mildew,downy_mildew,0.9261316657066345
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (431).png,downy_mildew,downy_mildew,0.9515253901481628
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (435).png,downy_mildew,downy_mildew,0.9137386679649353
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (437).png,downy_mildew,downy_mildew,0.9602252840995789
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (441).png,downy_mildew,downy_mildew,0.9462003111839294
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (443).png,downy_mildew,downy_mildew,0.7192263603210449
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (445).png,downy_mildew,downy_mildew,0.8830180764198303
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (449).png,downy_mildew,downy_mildew,0.8356741070747375
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (452).png,downy_mildew,downy_mildew,0.9179140329360962
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (457).png,downy_mildew,downy_mildew,0.9568842649459839
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (458).png,downy_mildew,downy_mildew,0.9714599251747131
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (463).png,downy_mildew,downy_mildew,0.7991737723350525
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (472).png,downy_mildew,downy_mildew,0.9711561799049377
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (491).png,downy_mildew,downy_mildew,0.9235219955444336
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (498).png,downy_mildew,downy_mildew,0.9142715930938721
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (503).png,downy_mildew,downy_mildew,0.8778508305549622
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (508).png,downy_mildew,downy_mildew,0.8006380200386047
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (51).png,downy_mildew,downy_mildew,0.9648404121398926
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (515).png,downy_mildew,downy_mildew,0.7856630086898804
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (520).png,downy_mildew,downy_mildew,0.8646771907806396
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (522).png,downy_mildew,downy_mildew,0.9069823622703552
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (525).png,downy_mildew,downy_mildew,0.9859251379966736
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (532).png,downy_mildew,downy_mildew,0.9913522005081177
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (534).png,downy_mildew,downy_mildew,0.9174623489379883
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (535).png,downy_mildew,downy_mildew,0.9605321884155273
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (537).png,downy_mildew,downy_mildew,0.9288290143013
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (540).png,downy_mildew,downy_mildew,0.9806817173957825
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (557).png,downy_mildew,downy_mildew,0.9656628370285034
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (560).png,downy_mildew,downy_mildew,0.8447180986404419
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (566).png,downy_mildew,downy_mildew,0.9691985249519348
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (574).png,downy_mildew,downy_mildew,0.9482526183128357
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (578).png,downy_mildew,downy_mildew,0.9123206734657288
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (584).png,downy_mildew,downy_mildew,0.9206969738006592
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (59).png,downy_mildew,downy_mildew,0.8847290277481079
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (592).png,downy_mildew,downy_mildew,0.6600842475891113
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (601).png,downy_mildew,downy_mildew,0.9455716013908386
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (605).png,downy_mildew,downy_mildew,0.9876888394355774
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (78).png,downy_mildew,downy_mildew,0.9653650522232056
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (81).png,downy_mildew,downy_mildew,0.9339578747749329
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (82).png,downy_mildew,downy_mildew,0.9772660136222839
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (84).png,downy_mildew,downy_mildew,0.9823181629180908
+dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/DownyMildew. (9).png,downy_mildew,downy_mildew,0.9904276132583618
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(1009).png,no_disease,no_disease,0.9798664450645447
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(1015).png,no_disease,no_disease,0.9804725050926208
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(1018).png,no_disease,no_disease,0.9520237445831299
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(1022).png,no_disease,no_disease,0.8260648846626282
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(1038).png,no_disease,no_disease,0.9515840411186218
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(106).png,no_disease,no_disease,0.9866653680801392
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(128).png,no_disease,no_disease,0.9159440994262695
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(13).png,no_disease,no_disease,0.9096580147743225
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(132).png,no_disease,no_disease,0.8981019258499146
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(135).png,no_disease,no_disease,0.9724245667457581
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(139).png,no_disease,no_disease,0.9591484665870667
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(154).png,no_disease,no_disease,0.929959774017334
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(162).png,no_disease,no_disease,0.9498947858810425
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(164).png,no_disease,no_disease,0.9523137211799622
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(168).png,no_disease,no_disease,0.9667928218841553
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(169).png,no_disease,no_disease,0.9573802351951599
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(172).png,no_disease,no_disease,0.9880868196487427
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(179).png,no_disease,no_disease,0.9679461121559143
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(181).png,no_disease,no_disease,0.9735091924667358
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(192).png,no_disease,no_disease,0.9616416692733765
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(196).png,no_disease,no_disease,0.977009654045105
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(197).png,no_disease,no_disease,0.9581558108329773
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(205).png,no_disease,no_disease,0.9767652153968811
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(206).png,no_disease,no_disease,0.9944387674331665
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(208).png,no_disease,no_disease,0.9769033789634705
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(210).png,no_disease,no_disease,0.9691258668899536
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(23).png,no_disease,no_disease,0.9640179872512817
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(240).png,no_disease,no_disease,0.9197174906730652
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(241).png,no_disease,no_disease,0.9572132229804993
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(247).png,no_disease,no_disease,0.9508249163627625
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(250).png,no_disease,no_disease,0.9714833498001099
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(252).png,no_disease,no_disease,0.9528274536132812
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(254).png,no_disease,no_disease,0.9718600511550903
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(255).png,no_disease,no_disease,0.9631147384643555
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(262).png,no_disease,no_disease,0.8069844245910645
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(267).png,no_disease,no_disease,0.9643380641937256
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(268).png,no_disease,no_disease,0.9351710677146912
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(269).png,no_disease,no_disease,0.8315380215644836
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(282).png,no_disease,no_disease,0.9602436423301697
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(307).png,no_disease,no_disease,0.9122260212898254
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(319).png,no_disease,no_disease,0.958832859992981
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(320).png,no_disease,no_disease,0.9140910506248474
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(325).png,no_disease,no_disease,0.9313944578170776
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(326).png,no_disease,no_disease,0.956093430519104
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(330).png,no_disease,no_disease,0.9892947673797607
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(339).png,no_disease,no_disease,0.9403541684150696
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(343).png,no_disease,no_disease,0.964378297328949
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(349).png,no_disease,no_disease,0.9236390590667725
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(35).png,no_disease,no_disease,0.559304416179657
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(37).png,no_disease,no_disease,0.9429304003715515
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(375).png,no_disease,no_disease,0.9347729682922363
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(378).png,no_disease,no_disease,0.9831626415252686
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(382).png,no_disease,no_disease,0.9625688195228577
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(385).png,no_disease,no_disease,0.8717982769012451
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(403).png,no_disease,no_disease,0.9511595368385315
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(407).png,no_disease,no_disease,0.9755581617355347
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(408).png,no_disease,no_disease,0.9733849167823792
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(412).png,no_disease,no_disease,0.98811274766922
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(414).png,no_disease,no_disease,0.9583451747894287
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(419).png,no_disease,no_disease,0.9246698021888733
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(429).png,no_disease,no_disease,0.9402561187744141
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(431).png,no_disease,no_disease,0.903206467628479
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(432).png,no_disease,no_disease,0.9467098712921143
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(434).png,no_disease,no_disease,0.9723106026649475
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(443).png,no_disease,no_disease,0.9378150105476379
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(450).png,no_disease,no_disease,0.9196091294288635
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(457).png,no_disease,no_disease,0.9859865307807922
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(470).png,no_disease,no_disease,0.9328875541687012
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(490).png,no_disease,no_disease,0.8953986763954163
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(498).png,no_disease,no_disease,0.8878514766693115
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(503).png,no_disease,no_disease,0.9870705008506775
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(505).png,no_disease,no_disease,0.9318293929100037
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(51).png,no_disease,no_disease,0.9588049054145813
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(510).png,no_disease,no_disease,0.9694567918777466
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(511).png,no_disease,no_disease,0.9678909182548523
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(526).png,no_disease,no_disease,0.9369388818740845
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(532).png,no_disease,no_disease,0.9076372981071472
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(537).png,no_disease,no_disease,0.9697738885879517
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(541).png,no_disease,no_disease,0.99063640832901
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(548).png,no_disease,no_disease,0.9833821654319763
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(550).png,no_disease,no_disease,0.9834502339363098
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(554).png,no_disease,no_disease,0.9941241145133972
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(581).png,no_disease,no_disease,0.9735185503959656
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(583).png,no_disease,no_disease,0.9469733238220215
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(589).png,no_disease,no_disease,0.952018678188324
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(594).png,no_disease,no_disease,0.9557389616966248
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(596).png,no_disease,no_disease,0.9248024225234985
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(599).png,no_disease,no_disease,0.9709336161613464
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(609).png,no_disease,no_disease,0.9734747409820557
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(61).png,no_disease,no_disease,0.9116426110267639
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(618).png,no_disease,no_disease,0.9292408227920532
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(62).png,no_disease,no_disease,0.9642260074615479
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(634).png,no_disease,no_disease,0.9545217156410217
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(635).png,no_disease,no_disease,0.9749009013175964
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(637).png,no_disease,no_disease,0.979103684425354
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(64).png,no_disease,no_disease,0.9688980579376221
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(654).png,no_disease,no_disease,0.9165834784507751
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(667).png,no_disease,no_disease,0.9526104927062988
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(670).png,no_disease,no_disease,0.9588898420333862
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(682).png,no_disease,no_disease,0.9700910449028015
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(687).png,no_disease,no_disease,0.9714285731315613
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(704).png,no_disease,no_disease,0.9542065262794495
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(710).png,no_disease,no_disease,0.9380208849906921
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(712).png,no_disease,no_disease,0.9619284868240356
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(729).png,no_disease,no_disease,0.9070677757263184
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(73).png,no_disease,no_disease,0.9790583252906799
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(733).png,no_disease,no_disease,0.9607242345809937
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(734).png,no_disease,no_disease,0.9805220365524292
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(736).png,no_disease,no_disease,0.9678899049758911
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(74).png,no_disease,no_disease,0.9633837342262268
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(740).png,no_disease,no_disease,0.9259275197982788
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(748).png,no_disease,no_disease,0.9872179627418518
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(749).png,no_disease,no_disease,0.9935844540596008
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(762).png,no_disease,no_disease,0.9273349642753601
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(767).png,no_disease,no_disease,0.9587627053260803
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(769).png,no_disease,no_disease,0.9654662609100342
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(771).png,no_disease,no_disease,0.9607937932014465
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(774).png,no_disease,no_disease,0.919123649597168
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(777).png,no_disease,no_disease,0.9248196482658386
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(778).png,no_disease,no_disease,0.9611538648605347
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(779).png,no_disease,no_disease,0.9013003706932068
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(785).png,no_disease,no_disease,0.9485703706741333
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(789).png,no_disease,no_disease,0.979590892791748
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(79).png,no_disease,no_disease,0.9574920535087585
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(796).png,no_disease,no_disease,0.9608117341995239
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(799).png,no_disease,no_disease,0.8802879452705383
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(806).png,no_disease,no_disease,0.9735692143440247
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(807).png,no_disease,no_disease,0.9673640727996826
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(818).png,no_disease,no_disease,0.972464382648468
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(822).png,no_disease,no_disease,0.8741311430931091
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(831).png,no_disease,no_disease,0.9443140625953674
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(834).png,no_disease,no_disease,0.9755051732063293
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(841).png,no_disease,no_disease,0.9795589447021484
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(842).png,no_disease,no_disease,0.9764084219932556
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(844).png,no_disease,no_disease,0.9822865128517151
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(846).png,no_disease,no_disease,0.9770466685295105
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(847).png,no_disease,no_disease,0.9144875407218933
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(860).png,no_disease,no_disease,0.9295584559440613
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(865).png,no_disease,no_disease,0.9933000802993774
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(868).png,no_disease,no_disease,0.9283804297447205
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(876).png,no_disease,no_disease,0.9798291325569153
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(885).png,no_disease,no_disease,0.8692600131034851
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(888).png,no_disease,no_disease,0.9445018172264099
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(906).png,no_disease,no_disease,0.8995144963264465
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(913).png,no_disease,no_disease,0.9803289175033569
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(919).png,no_disease,no_disease,0.9404441714286804
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(920).png,no_disease,no_disease,0.9685205221176147
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(927).png,no_disease,no_disease,0.9537263512611389
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(931).png,no_disease,no_disease,0.9786093235015869
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(957).png,no_disease,no_disease,0.9467300772666931
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(958).png,no_disease,no_disease,0.9753254055976868
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(966).png,no_disease,no_disease,0.9746126532554626
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(970).png,no_disease,no_disease,0.9798822999000549
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(980).png,no_disease,no_disease,0.979117751121521
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(988).png,no_disease,no_disease,0.9572722315788269
+dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(993).png,no_disease,no_disease,0.956123411655426

@@ -1,0 +1,94 @@
+filepath,true_class,predicted_class,confidence
+dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (154).jpg,bacterial_spot_rot,bacterial_spot_rot,0.8187562227249146
+dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (157).jpg,bacterial_spot_rot,bacterial_spot_rot,0.9505729675292969
+dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (16).jpg,bacterial_spot_rot,bacterial_spot_rot,0.978972315788269
+dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (162).jpg,bacterial_spot_rot,bacterial_spot_rot,0.9390131235122681
+dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (165).jpg,bacterial_spot_rot,bacterial_spot_rot,0.9308995604515076
+dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (168).jpg,bacterial_spot_rot,bacterial_spot_rot,0.968230664730072
+dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (173).jpg,bacterial_spot_rot,bacterial_spot_rot,0.8275683522224426
+dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (20).jpg,bacterial_spot_rot,bacterial_spot_rot,0.9564164280891418
+dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (29).jpg,bacterial_spot_rot,bacterial_spot_rot,0.9547310471534729
+dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (32).jpg,bacterial_spot_rot,bacterial_spot_rot,0.9897880554199219
+dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (40).jpg,bacterial_spot_rot,bacterial_spot_rot,0.9735291004180908
+dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (43).jpg,bacterial_spot_rot,bacterial_spot_rot,0.9592693448066711
+dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (46).jpg,bacterial_spot_rot,bacterial_spot_rot,0.9466280341148376
+dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (50).jpg,bacterial_spot_rot,bacterial_spot_rot,0.7978472113609314
+dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (55).jpg,bacterial_spot_rot,bacterial_spot_rot,0.9904550909996033
+dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (58).jpg,bacterial_spot_rot,bacterial_spot_rot,0.9588022828102112
+dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (60).jpg,bacterial_spot_rot,bacterial_spot_rot,0.9212054014205933
+dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (63).jpg,bacterial_spot_rot,bacterial_spot_rot,0.9632928967475891
+dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (69).jpg,bacterial_spot_rot,bacterial_spot_rot,0.858103334903717
+dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (74).jpg,bacterial_spot_rot,bacterial_spot_rot,0.8667693138122559
+dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (78).jpg,bacterial_spot_rot,bacterial_spot_rot,0.9931299090385437
+dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (80).jpg,bacterial_spot_rot,bacterial_spot_rot,0.9579949378967285
+dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (83).jpg,bacterial_spot_rot,bacterial_spot_rot,0.5229452848434448
+dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (86).jpg,bacterial_spot_rot,bacterial_spot_rot,0.9612094759941101
+dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (92).jpg,bacterial_spot_rot,bacterial_spot_rot,0.5995368361473083
+dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (97).jpg,bacterial_spot_rot,bacterial_spot_rot,0.9368675351142883
+dataset/Original Dataset/Original Dataset/Black Rot/Black rot(20).jpeg,black_rot,black_rot,0.8760434985160828
+dataset/Original Dataset/Original Dataset/Black Rot/Black rot(21).jpeg,black_rot,black_rot,0.9590211510658264
+dataset/Original Dataset/Original Dataset/Black Rot/Black rot(28).jpeg,black_rot,black_rot,0.9116843938827515
+dataset/Original Dataset/Original Dataset/Black Rot/Black rot(32).jpeg,black_rot,black_rot,0.9626862406730652
+dataset/Original Dataset/Original Dataset/Black Rot/Black rot(40).jpeg,black_rot,black_rot,0.9382857084274292
+dataset/Original Dataset/Original Dataset/Black Rot/Black rot(41).jpeg,black_rot,black_rot,0.9760553240776062
+dataset/Original Dataset/Original Dataset/Black Rot/Black rot(42).jpeg,black_rot,black_rot,0.9007734060287476
+dataset/Original Dataset/Original Dataset/Black Rot/Black rot(43).jpeg,black_rot,black_rot,0.9624804258346558
+dataset/Original Dataset/Original Dataset/Black Rot/Black rot(57).jpeg,black_rot,black_rot,0.9731335639953613
+dataset/Original Dataset/Original Dataset/Downy Mildew/Downy Mildew. (17).jpg,downy_mildew,downy_mildew,0.723989725112915
+dataset/Original Dataset/Original Dataset/Downy Mildew/Downy Mildew. (19).jpg,downy_mildew,downy_mildew,0.8895410895347595
+dataset/Original Dataset/Original Dataset/Downy Mildew/Downy Mildew. (20).jpeg,downy_mildew,downy_mildew,0.8468979597091675
+dataset/Original Dataset/Original Dataset/Downy Mildew/Downy Mildew. (22).jpg,downy_mildew,downy_mildew,0.7162206172943115
+dataset/Original Dataset/Original Dataset/Downy Mildew/Downy Mildew. (24).jpg,downy_mildew,downy_mildew,0.9938511848449707
+dataset/Original Dataset/Original Dataset/Downy Mildew/Downy Mildew. (27).jpeg,downy_mildew,downy_mildew,0.9287773966789246
+dataset/Original Dataset/Original Dataset/Downy Mildew/Downy Mildew. (28).jpg,downy_mildew,downy_mildew,0.9805681109428406
+dataset/Original Dataset/Original Dataset/Downy Mildew/Downy Mildew. (3).jpg,downy_mildew,downy_mildew,0.7949138283729553
+dataset/Original Dataset/Original Dataset/Downy Mildew/Downy Mildew. (31).jpg,downy_mildew,downy_mildew,0.8902304768562317
+dataset/Original Dataset/Original Dataset/Downy Mildew/Downy Mildew. (34).jpg,downy_mildew,downy_mildew,0.908876359462738
+dataset/Original Dataset/Original Dataset/Downy Mildew/Downy Mildew. (37).jpg,downy_mildew,downy_mildew,0.9388028383255005
+dataset/Original Dataset/Original Dataset/Downy Mildew/Downy Mildew. (4).jpeg,downy_mildew,downy_mildew,0.9440090656280518
+dataset/Original Dataset/Original Dataset/Downy Mildew/Downy Mildew. (46).jpg,downy_mildew,downy_mildew,0.9613296985626221
+dataset/Original Dataset/Original Dataset/Downy Mildew/Downy Mildew. (49).jpg,downy_mildew,downy_mildew,0.9417459964752197
+dataset/Original Dataset/Original Dataset/Downy Mildew/Downy Mildew. (50).jpg,downy_mildew,downy_mildew,0.9679126739501953
+dataset/Original Dataset/Original Dataset/Downy Mildew/Downy Mildew. (54).jpg,downy_mildew,downy_mildew,0.9756782054901123
+dataset/Original Dataset/Original Dataset/Downy Mildew/Downy Mildew. (6).jpg,downy_mildew,downy_mildew,0.9072774052619934
+dataset/Original Dataset/Original Dataset/Downy Mildew/Downy Mildew. (7).jpeg,downy_mildew,downy_mildew,0.9484289884567261
+dataset/Original Dataset/Original Dataset/Downy Mildew/Downy Mildew. (71).jpg,downy_mildew,downy_mildew,0.86863112449646
+dataset/Original Dataset/Original Dataset/Downy Mildew/Downy Mildew. (8).jpeg,downy_mildew,downy_mildew,0.9524269700050354
+dataset/Original Dataset/Original Dataset/Downy Mildew/Downy Mildew. (82).jpg,downy_mildew,downy_mildew,0.6681801080703735
+dataset/Original Dataset/Original Dataset/Downy Mildew/Downy Mildew. (85).jpg,downy_mildew,downy_mildew,0.9015345573425293
+dataset/Original Dataset/Original Dataset/Downy Mildew/Downy Mildew. (88).jpg,downy_mildew,downy_mildew,0.9611220359802246
+dataset/Original Dataset/Original Dataset/Downy Mildew/Downy Mildew. (9).jpg,downy_mildew,downy_mildew,0.9218358993530273
+dataset/Original Dataset/Original Dataset/Downy Mildew/Downy Mildew. (92).jpg,downy_mildew,downy_mildew,0.8390319347381592
+dataset/Original Dataset/Original Dataset/Downy Mildew/Downy Mildew. (95).jpg,downy_mildew,downy_mildew,0.9500287771224976
+dataset/Original Dataset/Original Dataset/Downy Mildew/Downy Mildew. (98).jpg,downy_mildew,downy_mildew,0.989713191986084
+dataset/Original Dataset/Original Dataset/No disease/No disease. (15).jpg,no_disease,no_disease,0.7281696200370789
+dataset/Original Dataset/Original Dataset/No disease/No disease. (152).jpg,no_disease,no_disease,0.9485422372817993
+dataset/Original Dataset/Original Dataset/No disease/No disease. (16).jpg,no_disease,no_disease,0.469997376203537
+dataset/Original Dataset/Original Dataset/No disease/No disease. (165).jpg,no_disease,no_disease,0.9503487944602966
+dataset/Original Dataset/Original Dataset/No disease/No disease. (168).jpg,no_disease,no_disease,0.9736480712890625
+dataset/Original Dataset/Original Dataset/No disease/No disease. (17).jpg,no_disease,no_disease,0.857011616230011
+dataset/Original Dataset/Original Dataset/No disease/No disease. (177).jpg,no_disease,no_disease,0.9701375961303711
+dataset/Original Dataset/Original Dataset/No disease/No disease. (181).jpg,no_disease,no_disease,0.9339154362678528
+dataset/Original Dataset/Original Dataset/No disease/No disease. (186).jpg,no_disease,no_disease,0.8300174474716187
+dataset/Original Dataset/Original Dataset/No disease/No disease. (2).jpeg,no_disease,no_disease,0.4771222472190857
+dataset/Original Dataset/Original Dataset/No disease/No disease. (27).jpg,no_disease,no_disease,0.9355931878089905
+dataset/Original Dataset/Original Dataset/No disease/No disease. (3).jpeg,no_disease,no_disease,0.8209644556045532
+dataset/Original Dataset/Original Dataset/No disease/No disease. (32).jpg,no_disease,no_disease,0.9426788687705994
+dataset/Original Dataset/Original Dataset/No disease/No disease. (35).jpg,no_disease,no_disease,0.7963387966156006
+dataset/Original Dataset/Original Dataset/No disease/No disease. (38).jpg,no_disease,no_disease,0.9592684507369995
+dataset/Original Dataset/Original Dataset/No disease/No disease. (41).jpg,no_disease,no_disease,0.9196711182594299
+dataset/Original Dataset/Original Dataset/No disease/No disease. (44).jpg,no_disease,no_disease,0.8768110275268555
+dataset/Original Dataset/Original Dataset/No disease/No disease. (47).jpg,no_disease,no_disease,0.9884728789329529
+dataset/Original Dataset/Original Dataset/No disease/No disease. (5).jpeg,no_disease,no_disease,0.6868559718132019
+dataset/Original Dataset/Original Dataset/No disease/No disease. (51).jpg,no_disease,no_disease,0.913537859916687
+dataset/Original Dataset/Original Dataset/No disease/No disease. (58).jpg,no_disease,no_disease,0.9067322611808777
+dataset/Original Dataset/Original Dataset/No disease/No disease. (61).jpg,no_disease,no_disease,0.9210106134414673
+dataset/Original Dataset/Original Dataset/No disease/No disease. (67).jpg,no_disease,no_disease,0.9918647408485413
+dataset/Original Dataset/Original Dataset/No disease/No disease. (7).jpeg,no_disease,no_disease,0.5594860911369324
+dataset/Original Dataset/Original Dataset/No disease/No disease. (71).jpg,no_disease,no_disease,0.9596110582351685
+dataset/Original Dataset/Original Dataset/No disease/No disease. (77).jpg,no_disease,no_disease,0.9632265567779541
+dataset/Original Dataset/Original Dataset/No disease/No disease. (8).jpeg,no_disease,no_disease,0.8965600728988647
+dataset/Original Dataset/Original Dataset/No disease/No disease. (81).jpg,no_disease,no_disease,0.9500454664230347
+dataset/Original Dataset/Original Dataset/No disease/No disease. (84).jpg,no_disease,no_disease,0.9164073467254639
+dataset/Original Dataset/Original Dataset/No disease/No disease. (9).jpeg,no_disease,no_disease,0.947655200958252
+dataset/Original Dataset/Original Dataset/No disease/No disease. (98).jpg,no_disease,no_disease,0.9943975210189819

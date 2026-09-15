@@ -1,0 +1,7 @@
+Class                 Original   Augmented   Total
+---------------------------------------------------
+bacterial_spot_rot         173         935     1108
+black_rot                   62         766      828
+downy_mildew               177         921     1098
+no_disease                 206        1041     1247
+Total                      618        3663     4281

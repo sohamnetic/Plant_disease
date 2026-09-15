@@ -1,0 +1,177 @@
+{
+  "created_utc": "2026-09-06T05:44:20.478906+00:00",
+  "random_seed": 42,
+  "fractions": {
+    "train": 0.7,
+    "val": 0.15,
+    "test": 0.15
+  },
+  "method": "Group-atomic split, seed 42. Per class: (1) assign groups that contain originals by largest-original-count-first greedy fill toward 70/15/15 of original images (prevents val/test starvation when a few original clusters are large); (2) shuffle augmented-only groups with RandomState(42) and assign each to the split with the most remaining all-image capacity toward 70/15/15. Mixed original+augmented groups stay together.",
+  "canonical": true,
+  "do_not_regenerate": true,
+  "sha256_of_concatenated_csvs": "87e772f36a61140d1e383183fbe567519cf16d6367a59d7df3e4a869ebcbc068",
+  "splits": {
+    "train": {
+      "n_images": 2997,
+      "n_groups": 2778,
+      "per_class": {
+        "bacterial_spot_rot": 776,
+        "black_rot": 580,
+        "downy_mildew": 768,
+        "no_disease": 873
+      },
+      "per_source": {
+        "augmented": 2565,
+        "original": 432
+      }
+    },
+    "val": {
+      "n_images": 642,
+      "n_groups": 624,
+      "per_class": {
+        "bacterial_spot_rot": 166,
+        "black_rot": 124,
+        "downy_mildew": 165,
+        "no_disease": 187
+      },
+      "per_source": {
+        "augmented": 549,
+        "original": 93
+      }
+    },
+    "test": {
+      "n_images": 642,
+      "n_groups": 629,
+      "per_class": {
+        "bacterial_spot_rot": 166,
+        "black_rot": 124,
+        "downy_mildew": 165,
+        "no_disease": 187
+      },
+      "per_source": {
+        "augmented": 549,
+        "original": 93
+      }
+    }
+  },
+  "class_proportions": {
+    "full": {
+      "counts": {
+        "bacterial_spot_rot": 1108,
+        "black_rot": 828,
+        "downy_mildew": 1098,
+        "no_disease": 1247
+      },
+      "pct": {
+        "bacterial_spot_rot": 25.882,
+        "black_rot": 19.341,
+        "downy_mildew": 25.648,
+        "no_disease": 29.129
+      }
+    },
+    "train": {
+      "counts": {
+        "bacterial_spot_rot": 776,
+        "black_rot": 580,
+        "downy_mildew": 768,
+        "no_disease": 873
+      },
+      "pct": {
+        "bacterial_spot_rot": 25.893,
+        "black_rot": 19.353,
+        "downy_mildew": 25.626,
+        "no_disease": 29.129
+      }
+    },
+    "val": {
+      "counts": {
+        "bacterial_spot_rot": 166,
+        "black_rot": 124,
+        "downy_mildew": 165,
+        "no_disease": 187
+      },
+      "pct": {
+        "bacterial_spot_rot": 25.857,
+        "black_rot": 19.315,
+        "downy_mildew": 25.701,
+        "no_disease": 29.128
+      }
+    },
+    "test": {
+      "counts": {
+        "bacterial_spot_rot": 166,
+        "black_rot": 124,
+        "downy_mildew": 165,
+        "no_disease": 187
+      },
+      "pct": {
+        "bacterial_spot_rot": 25.857,
+        "black_rot": 19.315,
+        "downy_mildew": 25.701,
+        "no_disease": 29.128
+      }
+    }
+  },
+  "original_only_proportions": {
+    "full": {
+      "counts": {
+        "bacterial_spot_rot": 173,
+        "black_rot": 62,
+        "downy_mildew": 177,
+        "no_disease": 206
+      },
+      "pct": {
+        "bacterial_spot_rot": 27.994,
+        "black_rot": 10.032,
+        "downy_mildew": 28.641,
+        "no_disease": 33.333
+      },
+      "n": 618
+    },
+    "train": {
+      "counts": {
+        "bacterial_spot_rot": 121,
+        "black_rot": 44,
+        "downy_mildew": 123,
+        "no_disease": 144
+      },
+      "pct": {
+        "bacterial_spot_rot": 28.009,
+        "black_rot": 10.185,
+        "downy_mildew": 28.472,
+        "no_disease": 33.333
+      },
+      "n": 432
+    },
+    "val": {
+      "counts": {
+        "bacterial_spot_rot": 26,
+        "black_rot": 9,
+        "downy_mildew": 27,
+        "no_disease": 31
+      },
+      "pct": {
+        "bacterial_spot_rot": 27.957,
+        "black_rot": 9.677,
+        "downy_mildew": 29.032,
+        "no_disease": 33.333
+      },
+      "n": 93
+    },
+    "test": {
+      "counts": {
+        "bacterial_spot_rot": 26,
+        "black_rot": 9,
+        "downy_mildew": 27,
+        "no_disease": 31
+      },
+      "pct": {
+        "bacterial_spot_rot": 27.957,
+        "black_rot": 9.677,
+        "downy_mildew": 29.032,
+        "no_disease": 33.333
+      },
+      "n": 93
+    }
+  }
+}

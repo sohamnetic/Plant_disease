@@ -1,0 +1,7 @@
+group_id,filepath,class,source_type,filename,phash
+g001701,dataset/Augmented Dataset/Augmented Dataset/Downy Mildew/Downy Mildew. (157).png,downy_mildew,augmented,Downy Mildew. (157).png,95ca2b941e0e7a1f
+g002984,dataset/Augmented Dataset/Augmented Dataset/No disease/No disease(455).png,no_disease,augmented,No disease(455).png,cbcf342cb23013fa
+g003594,dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (111).jpg,bacterial_spot_rot,original,Bacterial Spot. (111).jpg,c09b6f897c68565c
+g002984,dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (145).jpg,bacterial_spot_rot,original,Bacterial Spot. (145).jpg,c9cd3424a23257fb
+g003594,dataset/Original Dataset/Original Dataset/No disease/No disease. (163).jpg,no_disease,original,No disease. (163).jpg,c09b6f493da85e54
+g001701,dataset/Original Dataset/Original Dataset/No disease/No disease. (175).jpg,no_disease,original,No disease. (175).jpg,94ca1f141e4e3a5f

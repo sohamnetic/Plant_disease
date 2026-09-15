@@ -1,0 +1,6 @@
+filepath,true_class,predicted_class,confidence
+dataset/Original Dataset/Original Dataset/No disease/No disease. (16).jpg,no_disease,no_disease,0.469997376203537
+dataset/Original Dataset/Original Dataset/No disease/No disease. (2).jpeg,no_disease,no_disease,0.4771222472190857
+dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (83).jpg,bacterial_spot_rot,bacterial_spot_rot,0.5229452848434448
+dataset/Original Dataset/Original Dataset/No disease/No disease. (7).jpeg,no_disease,no_disease,0.5594860911369324
+dataset/Original Dataset/Original Dataset/Bacterial spot rot/Bacterial Spot. (92).jpg,bacterial_spot_rot,bacterial_spot_rot,0.5995368361473083
