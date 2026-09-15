@@ -78,7 +78,8 @@ def collect_images(folder: Path) -> list[Path]:
 def predict_pil(model: torch.nn.Module, im: Image.Image, tfm, device: torch.device) -> dict:
     im = ImageOps.exif_transpose(im).convert("RGB")
     tensor = tfm(im).unsqueeze(0).to(device)
-    with torch.no_grad():
+    model.eval()
+    with torch.inference_mode():
         logits = model(tensor)
         probs = F.softmax(logits, dim=1)[0].cpu().numpy()
     pred_idx = int(probs.argmax())

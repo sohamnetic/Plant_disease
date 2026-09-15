@@ -9,14 +9,16 @@ Held-out original-only test: accuracy **0.989**, macro-F1 **0.991** (n=93). Full
 
 The image **dataset is not in this repo** (too large). Training/eval still expect a local `dataset/` folder.
 
-This model **does not output disease severity**. API `confidence` is softmax certainty, not how severe the infection is.
+The trained network is **`experiments/experiment_003_effnetb0_combined/best_model.pt`** (PyTorch weights, not a `.pkl`). The API never retrains. It loads that file **once into RAM** and reuses it for every request. If the host sleeps (Render free plan), the `.pt` file is still on disk and is loaded again — scores for the same photo stay the same.
+
+`disease_score` is the predicted class probability on a **0–100** scale (softmax). That is **not** agronomic severity (percent leaf area infected).
 
 ## Inference API
 
 From the project root (after `pip install -r requirements.txt`):
 
 ```bash
-python -m uvicorn src.api:app --host 0.0.0.0 --port 8000
+python -m uvicorn src.api:app --host 0.0.0.0 --port 8000 --workers 1
 ```
 
 | What | URL |
