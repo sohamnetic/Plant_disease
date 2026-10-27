@@ -44,32 +44,72 @@ The free plan has **512 MB of memory and 0.1 CPU**. The normal app (PyTorch, eve
 
 | Method | Path | What it does |
 |---|---|---|
-| `POST` | `/predict` | Send one photo (multipart form field `file`). Returns the diagnosis as JSON. |
+| `POST` | `/jobs` | **Use this on Render.** Send one photo (multipart form field `file`). Answers at once with a `job_id`. |
+| `GET` | `/jobs/{job_id}` | The job's `status`: `queued`, `running`, `done` (then `result` holds the diagnosis) or `error` (then `detail`). Ask every 5 seconds. |
+| `POST` | `/predict` | Same diagnosis in one request. Fine locally, but on Render the request stays open 1–3 minutes and the reply can be cut off on the way back. |
 | `GET` | `/health` | Shows whether the server is up and which models it runs. Use it to wake the server before sending a photo. |
-| `GET` | `/docs` | Interactive documentation. You can try `/predict` here. |
+| `GET` | `/docs` | Interactive documentation. |
 
-**Timeouts:** use a long client timeout, **at least 5 minutes**. A cold start plus one photo can take 2–3 minutes on the free plan.
+**Why jobs:** a photo takes 1–3 minutes on the free plan (more after a sleep). Testing on Render showed that replies of requests left open that long were cut off, so the photo is sent in one short request and the result fetched in another.
+- Results are kept **1 hour**. A restart or sleep of the server clears them: if `GET /jobs/{job_id}` answers `404`, send the photo again.
+- At most 5 photos wait in line; more get `429` (try again later).
 
 ### Example requests
 
 ```bash
-curl -F "file=@leaf.jpg" https://<your-service>.onrender.com/predict
+curl -F "file=@leaf.jpg" https://<your-service>.onrender.com/jobs
+# -> {"job_id": "94016ec5...", "status": "queued", "result_url": "/jobs/94016ec5..."}
+curl https://<your-service>.onrender.com/jobs/94016ec5...
+# -> {"job_id": "...", "status": "done", "filename": "leaf.jpg", "result": { ...diagnosis... }}
 ```
 
 ```python
-import requests
-r = requests.post("https://<your-service>.onrender.com/predict",
-                  files={"file": open("leaf.jpg", "rb")}, timeout=300)
-result = r.json()
-print(result["message"])
+import time, requests
+URL = "https://<your-service>.onrender.com"
+job = requests.post(f"{URL}/jobs", files={"file": open("leaf.jpg", "rb")}, timeout=120).json()
+while True:
+    time.sleep(5)
+    j = requests.get(f"{URL}/jobs/{job['job_id']}", timeout=60).json()
+    if j["status"] in ("done", "error"):
+        break
+print(j["result"]["message"] if j["status"] == "done" else j["detail"])
 ```
 
+**Express (Node 18+) backend**, forwarding a photo from your frontend:
+
 ```javascript
-const form = new FormData();
-form.append("file", fileInput.files[0]);
-const res = await fetch("https://<your-service>.onrender.com/predict", { method: "POST", body: form });
-const result = await res.json();   // allow minutes: show a "checking..." state
+import express from "express";
+import multer from "multer";
+
+const app = express();
+const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 20 * 1024 * 1024 } });
+const ML_URL = process.env.ML_URL || "https://<your-service>.onrender.com";
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+app.post("/api/diagnose", upload.single("photo"), async (req, res) => {
+  if (!req.file) return res.status(400).json({ error: "photo is required" });
+  const form = new FormData();
+  form.append("file", new Blob([req.file.buffer], { type: req.file.mimetype }), req.file.originalname);
+  try {
+    let r = await fetch(`${ML_URL}/jobs`, { method: "POST", body: form, signal: AbortSignal.timeout(120_000) });
+    if (!r.ok) return res.status(r.status === 413 ? 413 : 502).json({ error: `ML service error ${r.status}` });
+    const { job_id } = await r.json();
+    for (let i = 0; i < 120; i++) {            // up to 10 minutes
+      await sleep(5000);
+      r = await fetch(`${ML_URL}/jobs/${job_id}`, { signal: AbortSignal.timeout(60_000) });
+      if (!r.ok) return res.status(502).json({ error: "The result was lost (server restarted). Please try again." });
+      const j = await r.json();
+      if (j.status === "done") return res.json(j.result);   // same JSON as /predict
+      if (j.status === "error") return res.status(500).json({ error: j.detail });
+    }
+    res.status(504).json({ error: "The diagnosis took too long. Please try again." });
+  } catch (e) {
+    res.status(502).json({ error: "Could not reach the ML service. Please try again." });
+  }
+});
 ```
+
+If the frontend should not wait that long on one request, return the `job_id` to it instead and let it ask your backend for the result every few seconds.
 
 ### What comes back (the fields to use)
 

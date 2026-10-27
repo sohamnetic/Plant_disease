@@ -29,6 +29,32 @@ def test_nms_keeps_best_of_overlapping_boxes():
     assert list(keep) == [0, 2]
 
 
+def test_jobs_give_a_ticket_then_the_predict_result(monkeypatch):
+    import time
+
+    from fastapi.testclient import TestClient
+
+    import api
+
+    class FakeEngine:
+        def predict_pil(self, im, with_overlay=True):
+            return {"status": "confident", "prediction": "black_rot", "size": im.size}
+
+    monkeypatch.setattr(api, "ensure_model_loaded", lambda: FakeEngine())
+    monkeypatch.setattr(api, "plant_public_result", lambda r: r)
+    c = TestClient(api.app)
+    with open(INSECT_PHOTO, "rb") as f:
+        r = c.post("/jobs", files={"file": ("leaf.jpg", f, "image/jpeg")})
+    assert r.status_code == 202 and r.json()["status"] == "queued"
+    for _ in range(50):
+        j = c.get(r.json()["result_url"]).json()
+        if j["status"] == "done":
+            break
+        time.sleep(0.1)
+    assert j["result"]["prediction"] == "black_rot" and j["result"]["filename"] == "leaf.jpg"
+    assert c.get("/jobs/unknown").status_code == 404
+
+
 @needs_models
 def test_classifier_matches_pytorch():
     from model_runtime import V2Engine

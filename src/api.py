@@ -29,6 +29,8 @@ import io
 import os
 import sys
 import threading
+import time
+import uuid
 from contextlib import asynccontextmanager
 from pathlib import Path
 
@@ -152,8 +154,20 @@ UPLOAD_PAGE = """<!DOCTYPE html>
     document.getElementById("f").addEventListener("submit", async (e) => {
       e.preventDefault();
       const out = document.getElementById("out"), res = document.getElementById("result");
-      res.innerHTML = "<p>Running...</p>"; out.textContent = "";
-      const r = await fetch("/predict", { method: "POST", body: new FormData(e.target) });
+      res.innerHTML = "<p>Running... (on the free server this takes 1-3 minutes)</p>"; out.textContent = "";
+      let r = await fetch("/jobs", { method: "POST", body: new FormData(e.target) });
+      if (r.ok) {  // a ticket: ask for the result every 5 s
+        const id = (await r.json()).job_id;
+        let j = { status: "queued" };
+        while (j.status === "queued" || j.status === "running") {
+          await new Promise(ok => setTimeout(ok, 5000));
+          r = await fetch("/jobs/" + id);
+          if (!r.ok) break;
+          j = await r.json();
+        }
+        if (r.ok && j.status === "error") r = new Response(JSON.stringify({ detail: j.detail }), { status: 500 });
+        else if (r.ok) r = new Response(JSON.stringify(j.result));
+      }
       const t = await r.text();
       try { const j = JSON.parse(t); out.textContent = JSON.stringify(j, null, 2); if (r.ok) render(j); else res.innerHTML = `<div class="card retake_photo">${esc(j.detail || t)}</div>`; }
       catch { res.innerHTML = ""; out.textContent = t; }
@@ -325,6 +339,63 @@ async def predict(file: UploadFile = File(...)) -> dict:
     im = await read_image(file)
     result = await run_in_threadpool(_predict_locked, engine, im)
     return {"filename": file.filename, **result, "model": MODEL_NAME, "fingerprint_sha256": ENGINE["fingerprint"]}
+
+
+# ---------------------------------------------------------------- jobs (slow servers)
+# On Render free a photo takes 1-3 minutes, and a request left open that long can be cut
+# on the way back. POST /jobs answers at once with a job_id; GET /jobs/{job_id} returns
+# the result when it is ready. Jobs live in memory: a restart or sleep clears them.
+JOBS: dict[str, dict] = {}
+JOBS_LOCK = threading.Lock()
+JOB_KEEP_S = 3600  # finished results are kept 1 hour
+MAX_WAITING = 5  # photos in line (each held in memory until its turn)
+
+
+def _job_set(job_id: str, **fields) -> None:
+    with JOBS_LOCK:
+        JOBS[job_id].update(fields)
+
+
+def _run_job(job_id: str, engine: PlantEngine, im: Image.Image, filename: str | None) -> None:
+    try:
+        with PREDICT_LOCK:
+            _job_set(job_id, status="running")
+            out = plant_public_result(engine.predict_pil(im, with_overlay=True))
+            print("job done, memory MB:", _memory(), flush=True)
+        result = {"filename": filename, **out, "model": MODEL_NAME, "fingerprint_sha256": ENGINE["fingerprint"]}
+        _job_set(job_id, status="done", result=result, finished=time.time())
+    except Exception as exc:
+        _job_set(job_id, status="error", detail=f"Prediction failed: {exc}", finished=time.time())
+
+
+@app.post("/jobs", status_code=202)
+async def create_job(file: UploadFile = File(...)) -> dict:
+    """Start diagnosing one photo; returns a job_id at once. Poll GET /jobs/{job_id}."""
+    try:
+        engine = ensure_model_loaded()
+    except Exception as exc:
+        raise HTTPException(503, f"Could not load frozen ensemble: {exc}") from exc
+    im = await read_image(file)
+    now = time.time()
+    with JOBS_LOCK:
+        for k in [k for k, j in JOBS.items() if now - j.get("finished", now) > JOB_KEEP_S]:
+            del JOBS[k]
+        if sum(j["status"] in ("queued", "running") for j in JOBS.values()) > MAX_WAITING:
+            raise HTTPException(429, "Too many photos in line. Try again in a few minutes.")
+        job_id = uuid.uuid4().hex
+        JOBS[job_id] = {"job_id": job_id, "status": "queued", "filename": file.filename}
+    threading.Thread(target=_run_job, args=(job_id, engine, im, file.filename), daemon=True).start()
+    return {"job_id": job_id, "status": "queued", "result_url": f"/jobs/{job_id}"}
+
+
+@app.get("/jobs/{job_id}")
+def get_job(job_id: str) -> dict:
+    """status: queued | running | done (result = same JSON as /predict) | error (detail)."""
+    with JOBS_LOCK:
+        job = JOBS.get(job_id)
+        if job is None:
+            raise HTTPException(404, "Unknown job. Results are kept 1 hour, and a server restart clears them.")
+        return {k: v for k, v in job.items() if k != "finished"}
 
 
 def _predict_locked(engine: PlantEngine, im: Image.Image, with_overlay: bool = True) -> dict:
