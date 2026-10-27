@@ -1,0 +1,24 @@
+{
+  "expert_verified": false,
+  "note": "Draft thresholds from the Phase 3 plan. Percent = lesion area / visible tissue of the worst leaf or head. Must be reviewed by a plant pathologist before advice is attached.",
+  "min_pct_for_disease": 0.5,
+  "early_max_pct": 5.0,
+  "early_max_lesions": 3,
+  "early_lesion_rule_max_pct": 10.0,
+  "moderate_max_pct": 25.0,
+  "severe_max_pct": 50.0,
+  "stages": [
+    "none",
+    "early",
+    "moderate",
+    "severe",
+    "critical"
+  ],
+  "insect": {
+    "note": "Draft: % of the worst leaf/head eaten through (insect holes) = hole area / leaf area including the holes. Bites from the leaf edge are not measured. Not expert-verified.",
+    "min_pct": 0.3,
+    "early_max_pct": 5.0,
+    "moderate_max_pct": 15.0,
+    "severe_max_pct": 30.0
+  }
+}

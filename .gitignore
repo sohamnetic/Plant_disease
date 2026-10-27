@@ -22,3 +22,18 @@ Desktop.ini
 
 # Generated inference dumps (keep review/final/eda)
 outputs/predictions/
+
+# Local training caches
+cache/
+outputs/severity/sheets/
+data_external/
+outputs/severity/overlays/
+outputs/severity/measured_review_sheets/
+outputs/tracking.db
+
+# Web probe photos (other people's photos, private evaluation only)
+new_pics/
+outputs/web_probe/overlays/
+outputs/web_probe/expert_review/*.jpg
+outputs/final/what_photos_we_need.jpg
+dataset_balanced/

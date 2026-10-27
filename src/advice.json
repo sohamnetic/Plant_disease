@@ -1,0 +1,126 @@
+{
+  "expert_verified": false,
+  "note": "Draft general guidance compiled from university extension fact sheets (sources below). Not a substitute for a local agronomist or extension officer. No chemical products or doses are given on purpose: follow local labels and expert advice.",
+  "sources": {
+    "black_rot": [
+      "https://pnwhandbooks.org/plantdisease/host-disease/cabbage-cauliflower-brassica-oleracea-black-rot",
+      "https://hort.extension.wisc.edu/articles/black-rot-crucifers/",
+      "https://web.extension.illinois.edu/hortanswers/detailproblem.cfm?PathogenID=133"
+    ],
+    "downy_mildew": [
+      "https://content.ces.ncsu.edu/downy-mildew-on-brassica-crops",
+      "https://pnwhandbooks.org/plantdisease/host-disease/cabbage-cauliflower-brassica-oleracea-downy-mildew-staghead"
+    ],
+    "bacterial_spot_rot": [
+      "https://pnwhandbooks.org/plantdisease/host-disease/cabbage-cauliflower-brassica-oleracea-bacterial-soft-rot-erwinia",
+      "https://extension.usu.edu/planthealth/ipm/notes_ag/veg-bacterial-soft-rot"
+    ],
+    "insect_damage": [
+      "https://ipm.ucanr.edu/agriculture/cole-crops/diamondback-moth/",
+      "https://ipm.ucanr.edu/agriculture/cole-crops/cabbage-looper/"
+    ]
+  },
+  "general": [
+    "Work with plants only when the leaves are dry; wet plants spread bacteria and spores.",
+    "Clean hands, knives and tools between plants and after handling diseased ones.",
+    "Remove affected material from the field: do not compost it or leave it between rows."
+  ],
+  "diseases": {
+    "no_disease": {
+      "none": [
+        "No action needed. Keep checking plants every few days, especially after rain or cool, damp weather.",
+        "Keep irrigation at the base of plants and early in the day so leaves and heads dry quickly."
+      ]
+    },
+    "black_rot": {
+      "why": "Bacterial disease (Xanthomonas campestris) spread by water splash, tools and seed; favoured by warm, wet weather.",
+      "early": [
+        "Pick off the affected leaves (yellow V-shaped patches from the leaf edge) when the plant is dry, and bag them.",
+        "Check neighbouring plants: black rot spreads along the row with splashing water.",
+        "Switch overhead watering to drip or base watering if possible."
+      ],
+      "moderate": [
+        "Remove all affected leaves; remove the whole plant if the veins inside the stem are black.",
+        "Stop working in the block while it is wet and clean tools after touching these plants.",
+        "Ask a local extension officer whether a protective spray is advisable (sprays only slow spread; they do not cure)."
+      ],
+      "severe": [
+        "Remove and destroy badly affected plants to protect the rest of the crop.",
+        "Plan at least 2 years without cabbage-family crops in this spot and control cruciferous weeds.",
+        "Next season: use certified disease-free seed or transplants and resistant varieties."
+      ],
+      "critical": [
+        "The plant is unlikely to recover: pull it out and destroy it away from the field.",
+        "Treat the area as infected: 2-3 year rotation away from cabbage-family crops and clear all crop residue."
+      ],
+      "check": "Check before acting: black rot starts at the leaf EDGE as yellow V-shaped areas pointing inward along a vein, and the veins inside them turn black. It does not grow grey or purple fuzz under the leaf. If you see angular yellow patches between the veins with grey-white fuzz underneath instead, it is more likely downy mildew."
+    },
+    "downy_mildew": {
+      "why": "Fungus-like pathogen (Hyaloperonospora) favoured by cool (10-15 C), humid weather and long leaf wetness.",
+      "early": [
+        "Remove the spotted leaves and improve airflow: thin crowded plants and clear weeds around them.",
+        "Water in the morning at the base of the plant so leaves are dry by evening.",
+        "Watch closely during cool, damp spells: this is when it spreads fastest."
+      ],
+      "moderate": [
+        "Remove affected leaves and keep the canopy open; avoid overhead irrigation completely.",
+        "Ask a local extension officer about a protective treatment while cool, wet weather continues (treatments protect new growth, they do not cure infected leaves)."
+      ],
+      "severe": [
+        "Remove heavily infected leaves or plants; check whether the head (curd) shows grey-brown discolouration.",
+        "Harvest healthy heads early if the weather stays cool and wet."
+      ],
+      "critical": [
+        "Remove and destroy the plant; clear all residue at the end of the season.",
+        "Next season: 2-3 year rotation away from cabbage-family crops, disease-free transplants, wider spacing."
+      ],
+      "check": "Check before acting: downy mildew gives angular yellow-to-brown patches bounded by the veins, with grey-white or purplish fuzz on the UNDERSIDE (easiest to see on humid mornings). If the yellow areas start at the leaf edge as V-shapes with blackened veins inside, it is more likely black rot, which is bacterial and handled differently. This model can confuse the two on leaves with yellow V-shaped edges."
+    },
+    "bacterial_spot_rot": {
+      "why": "Bacterial rot of the head (curd) that enters through wounds and water sitting on the head; favoured by wet, mild weather.",
+      "early": [
+        "Keep the head dry: stop overhead watering during head development and water early in the day.",
+        "Avoid damaging heads and leaves during weeding or harvest; wounds let bacteria in.",
+        "If the head is near maturity, harvest soon and cut away the affected area."
+      ],
+      "moderate": [
+        "Harvest affected heads now if usable; cut well beyond the discoloured area with a clean knife.",
+        "Clean the knife between heads and do not store affected heads with healthy ones.",
+        "Improve airflow around the remaining plants and keep water off the heads."
+      ],
+      "severe": [
+        "The head is unlikely to be marketable: remove it and destroy it away from the field.",
+        "Check nearby heads daily; rot can spread quickly in wet weather."
+      ],
+      "critical": [
+        "Remove the whole plant and destroy it (do not compost).",
+        "Clear crop debris after harvest and use clean, well-drained water sources for irrigation."
+      ],
+      "check": "Check before acting: bacterial rot of the head is SOFT, wet or slimy, often smells bad, and the brown tissue collapses when pressed. Downy mildew on the head instead gives dry grey-brown discoloration of the curd surface, usually with downy mildew patches (grey-white fuzz underneath) on the leaves of the same plant. This model can confuse the two on heads."
+    },
+    "insect_damage": {
+      "why": "Holes and chewed leaf edges are made by leaf-eating insects (caterpillars such as diamondback moth, cabbage looper and cabbage white butterfly; also flea beetles) or by slugs and snails. It is not a disease.",
+      "check": "Turn leaves over and look at the growing point: green caterpillars, eggs or droppings point to caterpillars; many tiny round holes and small jumping beetles to flea beetles; slime trails to slugs or snails.",
+      "early": [
+        "Look on the undersides of leaves and in the growing point for caterpillars and eggs; pick them off and destroy them.",
+        "Check again in 3-4 days: a few holes on older outer leaves rarely affect the head.",
+        "Spare natural enemies (parasitic wasps, ground beetles, spiders): avoid broad-spectrum sprays."
+      ],
+      "moderate": [
+        "Check about 25 plants spread across the field (undersides of lower leaves) to see how widespread the pests are.",
+        "Ask a local extension officer about the action threshold and suitable, preferably selective or biological, control before spraying; always follow the product label.",
+        "Protect young plants with fine insect netting where practical, and keep cabbage-family weeds down around the field."
+      ],
+      "severe": [
+        "Damage is heavy: act soon, especially if the young head or the growing point is being eaten.",
+        "Get advice from a local extension officer on control suited to the pest you found; follow local labels.",
+        "After harvest remove crop residues, and avoid planting cabbage-family crops in the same field in consecutive years."
+      ],
+      "critical": [
+        "The leaves are mostly eaten: protect the remaining plants first and get local expert advice quickly.",
+        "Heavily eaten young plants may not recover; consider replacing them.",
+        "After harvest remove crop residues, and avoid planting cabbage-family crops in the same field in consecutive years."
+      ]
+    }
+  }
+}

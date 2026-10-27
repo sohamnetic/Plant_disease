@@ -8,3 +8,4 @@ matplotlib>=3.8
 fastapi>=0.115
 uvicorn[standard]>=0.30
 python-multipart>=0.0.9
+transformers>=4.40  # CLIP for the cauliflower gate (weights: openai/clip-vit-large-patch14)
