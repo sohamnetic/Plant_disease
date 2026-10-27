@@ -31,8 +31,12 @@ import sys
 from pathlib import Path
 
 import numpy as np
-import torch
 from PIL import Image, ImageOps
+
+try:  # the ONNX deployment imports the prompts and threshold only (src/onnx_runtime.py)
+    import torch
+except ImportError:
+    torch = None
 
 HERE = Path(__file__).resolve().parent
 CLIP_ID = "openai/clip-vit-large-patch14"
@@ -71,14 +75,14 @@ class CauliflowerGate:
         self.scale = float(z["logit_scale"])
         self.threshold = THRESHOLD
 
-    @torch.inference_mode()
     def score(self, im: Image.Image) -> float:
         """Probability (0-1) that the photo shows a cauliflower plant, leaf or head."""
         im = ImageOps.exif_transpose(im).convert("RGB")
         im.thumbnail((WORK_SIDE, WORK_SIDE))
-        x = self.proc(images=im, return_tensors="pt")["pixel_values"].to(self.device)
-        e = torch.nn.functional.normalize(self.model(pixel_values=x).image_embeds.float(), dim=-1)
-        p = torch.softmax(self.scale * e @ self.text.T, dim=-1)[0]
+        with torch.inference_mode():
+            x = self.proc(images=im, return_tensors="pt")["pixel_values"].to(self.device)
+            e = torch.nn.functional.normalize(self.model(pixel_values=x).image_embeds.float(), dim=-1)
+            p = torch.softmax(self.scale * e @ self.text.T, dim=-1)[0]
         return float(p[:len(POSITIVE)].sum())
 
     def check(self, im: Image.Image) -> dict:
@@ -101,15 +105,13 @@ def build() -> None:
     print("written", EMB_FILE, t.shape)
 
 
-def evaluate() -> None:
-    """Pass rate on cauliflower photos no model trained on; reject rate on local non-cauliflower images."""
+def eval_sets() -> dict[str, list[Path]]:
+    """Cauliflower photos no model trained on, and local non-cauliflower images."""
     import glob
     import pandas as pd
     sys.path.insert(0, str(HERE))
     import config as cfg
     root = cfg.PROJECT_ROOT
-    gate = CauliflowerGate("cuda" if torch.cuda.is_available() else "cpu")
-
     sets: dict[str, list[Path]] = {}
     sets["external_test"] = [root / f for f in pd.read_csv(root / "splits_v3/external_test.csv")["filepath"]]
     t = pd.read_csv(cfg.SPLITS_DIR / "test.csv")
@@ -131,7 +133,17 @@ def evaluate() -> None:
     user_wallpaper = Path(r"C:/Users/lenovo/Downloads/wp8926127-aot-4k-wallpapers.jpg")
     sets["not_cauliflower"] = [p for p in [user_wallpaper] + neg if p.exists()]
 
-    out: dict = {"threshold": THRESHOLD, "model": CLIP_ID, "sets": {}}
+    return sets
+
+
+def evaluate(gate=None, dst: Path | None = None) -> None:
+    """Pass rate on cauliflower photos no model trained on; reject rate on local non-cauliflower images."""
+    sys.path.insert(0, str(HERE))
+    import config as cfg
+    gate = gate or CauliflowerGate("cuda" if torch.cuda.is_available() else "cpu")
+    sets = eval_sets()
+
+    out: dict = {"threshold": THRESHOLD, "model": getattr(gate, "name", CLIP_ID), "sets": {}}
     for name, files in sets.items():
         s = []
         for f in files:
@@ -153,7 +165,7 @@ def evaluate() -> None:
              "plain_green": Image.new("RGB", (640, 480), (30, 120, 40))}
     out["synthetic_scores"] = {k: round(gate.score(v), 4) for k, v in synth.items()}
     print("synthetic", out["synthetic_scores"])
-    dst = cfg.OUTPUTS_DIR / "final" / "cauliflower_gate_eval.json"
+    dst = dst or cfg.OUTPUTS_DIR / "final" / "cauliflower_gate_eval.json"
     dst.write_text(json.dumps(out, indent=2))
     print("written", dst)
 

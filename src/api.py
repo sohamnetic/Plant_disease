@@ -16,6 +16,10 @@ Every response carries a status the caller should act on:
 Run from the project root:
 
   python -m uvicorn src.api:app --host 0.0.0.0 --port 8000 --workers 1
+
+Small servers (Render free, 512 MB): PLANT_BACKEND=onnx runs the same models with
+onnxruntime and no PyTorch, loading one network at a time (src/onnx_runtime.py,
+DEPLOY.md). Photos are then analysed one at a time, at most MAX_SIDE px.
 """
 
 from __future__ import annotations
@@ -35,18 +39,24 @@ os.environ.setdefault("MKL_NUM_THREADS", "1")
 from fastapi import FastAPI, File, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse
-from PIL import Image
+from PIL import Image, ImageOps
+from starlette.concurrency import run_in_threadpool
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-import torch
-
 from model_runtime import DEFAULT_EXP, MODEL_NAME, V2Engine, pick_device, public_result
 from plant_runtime import DEFAULT_INSECT_EXP, PlantEngine, plant_public_result
 from seg_runtime import DEFAULT_HOLE_WEIGHTS as HOLE_WEIGHTS
 from seg_runtime import DEFAULT_WEIGHTS as SEG_WEIGHTS
-from v2_model import GRADE_LABELS, GRADE_MEANING
+from v2_common import GRADE_LABELS, GRADE_MEANING
 
-torch.set_num_threads(int(os.environ.get("TORCH_NUM_THREADS", "1")))
+BACKEND = os.environ.get("PLANT_BACKEND", "torch")  # "onnx": no PyTorch (src/onnx_runtime.py)
+if BACKEND == "torch":
+    import torch
+
+    torch.set_num_threads(int(os.environ.get("TORCH_NUM_THREADS", "1")))
+MAX_UPLOAD_MB = 20
+MAX_SIDE = int(os.environ.get("MAX_SIDE", "0" if BACKEND == "torch" else "2048"))  # 0 = keep full size
+PREDICT_LOCK = threading.Lock()  # one photo at a time (memory); /health stays responsive meanwhile
 
 ENGINE_LOCK = threading.Lock()
 ENGINE: dict = {"engine": None, "fingerprint": None, "loaded": False}
@@ -220,8 +230,13 @@ COMPARE_PAGE = """<!DOCTYPE html>
 
 def _fingerprint(exp_dir: Path) -> str:
     h = hashlib.sha256()
-    insect = sorted(DEFAULT_INSECT_EXP.glob("fold*.pt")) + [DEFAULT_INSECT_EXP / "calibration.json"] if (DEFAULT_INSECT_EXP / "calibration.json").is_file() else []
-    for path in sorted(exp_dir.glob("fold*.pt")) + [exp_dir / "calibration.json"] + insect + [SEG_WEIGHTS] + ([HOLE_WEIGHTS] if HOLE_WEIGHTS.is_file() else []):
+    if BACKEND == "onnx":
+        from onnx_runtime import MODELS_DIR
+        files = sorted(p for p in MODELS_DIR.rglob("*") if p.is_file())
+    else:
+        insect = sorted(DEFAULT_INSECT_EXP.glob("fold*.pt")) + [DEFAULT_INSECT_EXP / "calibration.json"] if (DEFAULT_INSECT_EXP / "calibration.json").is_file() else []
+        files = sorted(exp_dir.glob("fold*.pt")) + [exp_dir / "calibration.json"] + insect + [SEG_WEIGHTS] + ([HOLE_WEIGHTS] if HOLE_WEIGHTS.is_file() else [])
+    for path in files:
         with path.open("rb") as f:
             for chunk in iter(lambda: f.read(1024 * 1024), b""):
                 h.update(chunk)
@@ -235,12 +250,18 @@ def ensure_model_loaded() -> PlantEngine:
     with ENGINE_LOCK:
         if ENGINE["loaded"]:
             return ENGINE["engine"]
-        if not (DEFAULT_EXP / "calibration.json").is_file():
+        if BACKEND == "onnx":
+            from onnx_runtime import MODELS_DIR, build_engine
+            if not (MODELS_DIR / "classifier" / "calibration.json").is_file():
+                raise RuntimeError(f"ONNX models missing in {MODELS_DIR} (see DEPLOY.md). The API does not train a model.")
+            ENGINE["engine"] = build_engine(MODELS_DIR)
+        elif not (DEFAULT_EXP / "calibration.json").is_file():
             raise RuntimeError(f"Frozen ensemble missing in {DEFAULT_EXP}. The API does not train a model.")
-        ENGINE["engine"] = PlantEngine(DEFAULT_EXP, SEG_WEIGHTS, device=pick_device(), seg_device="cpu")
+        else:
+            ENGINE["engine"] = PlantEngine(DEFAULT_EXP, SEG_WEIGHTS, device=pick_device(), seg_device="cpu")
         ENGINE["fingerprint"] = _fingerprint(DEFAULT_EXP)
         ENGINE["loaded"] = True
-        print("Frozen ensemble loaded (stays in memory):", DEFAULT_EXP)
+        print("Frozen ensemble ready:", DEFAULT_EXP, f"(backend {BACKEND})")
         return ENGINE["engine"]
 
 
@@ -281,6 +302,7 @@ def health() -> dict:
         "insect_model": DEFAULT_INSECT_EXP.name if engine.insect_cls is not None else None,
         "severity_grades": {g: f"{GRADE_LABELS[g]}: {GRADE_MEANING[g]}" for g in range(len(GRADE_LABELS))},
         "device": str(engine.device),
+        "backend": BACKEND,
         "retrains": False,
     }
 
@@ -293,16 +315,27 @@ async def predict(file: UploadFile = File(...)) -> dict:
     except Exception as exc:
         raise HTTPException(503, f"Could not load frozen ensemble: {exc}") from exc
     im = await read_image(file)
-    result = plant_public_result(engine.predict_pil(im))
+    result = await run_in_threadpool(_predict_locked, engine, im)
     return {"filename": file.filename, **result, "model": MODEL_NAME, "fingerprint_sha256": ENGINE["fingerprint"]}
+
+
+def _predict_locked(engine: PlantEngine, im: Image.Image, with_overlay: bool = True) -> dict:
+    with PREDICT_LOCK:
+        return plant_public_result(engine.predict_pil(im, with_overlay=with_overlay))
 
 
 async def read_image(file: UploadFile) -> Image.Image:
     raw = await file.read()
     if not raw:
         raise HTTPException(400, "Empty file")
+    if len(raw) > MAX_UPLOAD_MB * 2**20:
+        raise HTTPException(413, f"Photo larger than {MAX_UPLOAD_MB} MB")
     try:
         im = Image.open(io.BytesIO(raw))
+        if MAX_SIDE:
+            im.draft("RGB", (MAX_SIDE, MAX_SIDE))  # JPEG: decode at reduced size, saves memory
+            im = ImageOps.exif_transpose(im)
+            im.thumbnail((MAX_SIDE, MAX_SIDE))
         im.load()
     except Exception as exc:
         raise HTTPException(400, f"Could not read image: {exc}") from exc
@@ -327,6 +360,8 @@ def compare_page() -> str:
 @app.post("/compare")
 async def compare(file: UploadFile = File(...)) -> dict:
     """Same photo through the previous (v2) and current model, for side-by-side testing."""
+    if BACKEND == "onnx":
+        raise HTTPException(404, "The comparison with the previous model is not available on this server.")
     im = await read_image(file)
     engine = ensure_model_loaded()
     g = engine.check_cauliflower(im)

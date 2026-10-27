@@ -37,3 +37,8 @@ outputs/web_probe/overlays/
 outputs/web_probe/expert_review/*.jpg
 outputs/final/what_photos_we_need.jpg
 dataset_balanced/
+
+# ONNX models for the Render deployment (published as a release asset, see DEPLOY.md)
+deploy_models/
+outputs/deploy/
+deploy_models.zip

@@ -17,18 +17,14 @@ import json
 from pathlib import Path
 
 import numpy as np
-import torch
 from PIL import Image, ImageFilter, ImageOps, ImageStat
 
-from v2_model import (
-    CLASS_ORDER,
-    DISEASES,
-    GRADE_LABELS,
-    GRADE_MEANING,
-    MultiTaskNet,
-    coral_to_probs,
-    eval_transforms,
-)
+from v2_common import CLASS_ORDER, DISEASES, GRADE_LABELS, GRADE_MEANING
+
+try:  # the ONNX deployment (src/onnx_runtime.py) runs without PyTorch
+    import torch
+except ImportError:
+    torch = None
 
 RELIABLE_STATUSES = {"confident", "uncertain"}
 
@@ -37,7 +33,7 @@ DEFAULT_EXP = PROJECT_ROOT / "experiments" / "experiment_006_v3_measured_severit
 MODEL_NAME = DEFAULT_EXP.name
 
 
-def pick_device() -> torch.device:
+def pick_device() -> "torch.device":
     # Render has no GPU. Prefer CPU even if a CUDA wheel is present.
     return torch.device("cpu")
 
@@ -88,6 +84,8 @@ def quality_issues(q: dict[str, float], th: dict[str, float]) -> list[str]:
 
 class V2Engine:
     def __init__(self, exp_dir: Path = DEFAULT_EXP, device: torch.device | None = None):
+        from v2_model import MultiTaskNet, eval_transforms
+
         self.exp_dir = Path(exp_dir)
         self.device = device or pick_device()
         self.cal = json.loads((self.exp_dir / "calibration.json").read_text())
@@ -111,9 +109,12 @@ class V2Engine:
         self.checkpoints = [p.name for p in sorted(self.exp_dir.glob("fold*.pt"))]
 
     # ---- raw network outputs -------------------------------------------------
-    @torch.inference_mode()
     def forward_batch(self, x: torch.Tensor) -> dict[str, torch.Tensor]:
         """x: (N,3,H,W) normalised. Returns ensemble x TTA averaged outputs + OOD score."""
+        with torch.inference_mode():
+            return self._forward_batch(x)
+
+    def _forward_batch(self, x: torch.Tensor) -> dict[str, torch.Tensor]:
         x = x.to(self.device)
         views = torch.cat([x, torch.flip(x, dims=[3])])
         n = len(x)
@@ -135,87 +136,22 @@ class V2Engine:
         }
 
     # ---- calibrated interpretation ------------------------------------------
-    def interpret(self, raw: dict[str, torch.Tensor], i: int, issues: list[str]) -> dict:
+    def interpret(self, raw: dict, i: int, issues: list[str]) -> dict:
+        return interpret_probs(self.cal, self.classes, *self._probs(raw, i), issues)
+
+    def _probs(self, raw: dict[str, torch.Tensor], i: int) -> tuple[np.ndarray, np.ndarray, np.ndarray, float]:
+        """Calibrated (diagnosis, presence, severity) probabilities and the OOD score of image i."""
+        from v2_model import coral_to_probs
+
         c = self.cal
-        probs = torch.softmax(raw["cls"][i] / c["cls_temperature"], dim=0).cpu().numpy()
-        pres = torch.sigmoid(raw["presence"][i] / c["presence_temperature"]).cpu().numpy()
-        sev_p = coral_to_probs(raw["sev"][i : i + 1] / c["sev_temperature"])[0].cpu().numpy()
-        sev_p = sev_p / sev_p.sum()
-        ood = float(raw["maha"][i])
+        with torch.inference_mode():
+            probs = torch.softmax(raw["cls"][i] / c["cls_temperature"], dim=0).cpu().numpy()
+            pres = torch.sigmoid(raw["presence"][i] / c["presence_temperature"]).cpu().numpy()
+            sev_p = coral_to_probs(raw["sev"][i : i + 1] / c["sev_temperature"])[0].cpu().numpy()
+        return probs, pres, sev_p, float(raw["maha"][i])
 
-        classes = self.classes
-        pred = int(probs.argmax())
-        pred_name = classes[pred]
-        pred_set = [classes[j] for j in range(len(classes)) if probs[j] >= 1 - c["cls_conformal_qhat"]]
-        if pred_name not in pred_set:
-            pred_set.insert(0, pred_name)
-
-        if pred_name == "no_disease":
-            grade, grade_conf, grade_range = 0, float(sev_p[0]), [0, 0]
-        else:
-            # Diagnosed diseased: grade 0 is excluded, renormalise over 1-4.
-            sp = sev_p.copy()
-            sp[0] = 0.0
-            sp = sp / max(sp.sum(), 1e-9)
-            grade = int(sp.argmax())
-            grade_conf = float(sp[grade])
-            members = [g for g in range(1, 5) if sp[g] >= 1 - c["sev_conformal_qhat"]] or [grade]
-            grade_range = [min(members + [grade]), max(members + [grade])]
-            sev_p = sp
-        expected = float((sev_p * np.arange(len(sev_p))).sum())
-        severity = {
-            "grade": grade,
-            "stage": GRADE_LABELS[grade],
-            "meaning": GRADE_MEANING[grade],
-            "grade_confidence": round(grade_conf, 4),
-            "grade_range_90": grade_range,
-            "expected_grade": round(expected, 2),
-            "severity_score_0_100": round(expected / 4 * 100, 1),
-            "grade_probabilities": {GRADE_LABELS[g]: round(float(p), 4) for g, p in enumerate(sev_p)},
-        }
-
-        others = [
-            {"disease": d, "probability": round(float(pres[j]), 4)}
-            for j, d in enumerate(DISEASES)
-            if d != pred_name and pres[j] >= c["presence_threshold"]
-        ]
-
-        confidence = float(probs[pred])
-        if issues:
-            status = "retake_photo"
-        elif ood > c["ood_threshold"]:
-            status = "out_of_scope"
-        elif confidence < c.get("min_evidence_prob", 0.0):
-            # No class stands out: real photos essentially never look like this.
-            status = "no_evidence"
-        elif len(pred_set) > 1 or confidence < c["confident_min_prob"]:
-            status = "uncertain"
-        else:
-            status = "confident"
-
-        retake_reason = "; ".join(issues)
-        if issues and ood > c["ood_threshold"]:
-            retake_reason += "; the subject also does not look like a cauliflower/brassica photo"
-        return {
-            "status": status,
-            "status_reason": {
-                "retake_photo": retake_reason,
-                "out_of_scope": "photo does not look like the cauliflower/brassica photos the model was trained on",
-                "no_evidence": "the model sees no clear sign of any disease or of a healthy plant",
-                "uncertain": "more than one diagnosis is plausible at the 95% level" if len(pred_set) > 1
-                else f"confidence below {c['confident_min_prob']:.2f}",
-                "confident": "single diagnosis at the 95% level",
-            }[status],
-            "prediction": pred_name,
-            "confidence": round(confidence, 4),
-            "prediction_set_95": pred_set,
-            "class_probabilities": {n: round(float(p), 4) for n, p in zip(classes, probs)},
-            "severity": severity,
-            "disease_presence": {d: round(float(p), 4) for d, p in zip(DISEASES, pres)},
-            "other_findings": others,
-            "ood_score": round(ood, 2),
-            "ood_threshold": round(float(c["ood_threshold"]), 2),
-        }
+    def forward_images(self, ims: list[Image.Image]) -> dict:
+        return self.forward_batch(torch.stack([self.tfm(im) for im in ims]))
 
     def predict_pil(self, im: Image.Image) -> dict:
         im = ImageOps.exif_transpose(im).convert("RGB")
@@ -225,6 +161,86 @@ class V2Engine:
         out = self.interpret(raw, 0, issues)
         out["image_quality"] = {"ok": not issues, "issues": issues, **{k: round(v, 3) for k, v in q.items()}}
         return out
+
+
+
+def interpret_probs(c: dict, classes: list[str], probs: np.ndarray, pres: np.ndarray, sev_p: np.ndarray,
+                    ood: float, issues: list[str]) -> dict:
+    """Status, prediction set, severity and findings from calibrated probabilities
+    (shared by the PyTorch engine and the ONNX engine, src/onnx_runtime.py)."""
+    sev_p = sev_p / sev_p.sum()
+    pred = int(probs.argmax())
+    pred_name = classes[pred]
+    pred_set = [classes[j] for j in range(len(classes)) if probs[j] >= 1 - c["cls_conformal_qhat"]]
+    if pred_name not in pred_set:
+        pred_set.insert(0, pred_name)
+
+    if pred_name == "no_disease":
+        grade, grade_conf, grade_range = 0, float(sev_p[0]), [0, 0]
+    else:
+        # Diagnosed diseased: grade 0 is excluded, renormalise over 1-4.
+        sp = sev_p.copy()
+        sp[0] = 0.0
+        sp = sp / max(sp.sum(), 1e-9)
+        grade = int(sp.argmax())
+        grade_conf = float(sp[grade])
+        members = [g for g in range(1, 5) if sp[g] >= 1 - c["sev_conformal_qhat"]] or [grade]
+        grade_range = [min(members + [grade]), max(members + [grade])]
+        sev_p = sp
+    expected = float((sev_p * np.arange(len(sev_p))).sum())
+    severity = {
+        "grade": grade,
+        "stage": GRADE_LABELS[grade],
+        "meaning": GRADE_MEANING[grade],
+        "grade_confidence": round(grade_conf, 4),
+        "grade_range_90": grade_range,
+        "expected_grade": round(expected, 2),
+        "severity_score_0_100": round(expected / 4 * 100, 1),
+        "grade_probabilities": {GRADE_LABELS[g]: round(float(p), 4) for g, p in enumerate(sev_p)},
+    }
+
+    others = [
+        {"disease": d, "probability": round(float(pres[j]), 4)}
+        for j, d in enumerate(DISEASES)
+        if d != pred_name and pres[j] >= c["presence_threshold"]
+    ]
+
+    confidence = float(probs[pred])
+    if issues:
+        status = "retake_photo"
+    elif ood > c["ood_threshold"]:
+        status = "out_of_scope"
+    elif confidence < c.get("min_evidence_prob", 0.0):
+        # No class stands out: real photos essentially never look like this.
+        status = "no_evidence"
+    elif len(pred_set) > 1 or confidence < c["confident_min_prob"]:
+        status = "uncertain"
+    else:
+        status = "confident"
+
+    retake_reason = "; ".join(issues)
+    if issues and ood > c["ood_threshold"]:
+        retake_reason += "; the subject also does not look like a cauliflower/brassica photo"
+    return {
+        "status": status,
+        "status_reason": {
+            "retake_photo": retake_reason,
+            "out_of_scope": "photo does not look like the cauliflower/brassica photos the model was trained on",
+            "no_evidence": "the model sees no clear sign of any disease or of a healthy plant",
+            "uncertain": "more than one diagnosis is plausible at the 95% level" if len(pred_set) > 1
+            else f"confidence below {c['confident_min_prob']:.2f}",
+            "confident": "single diagnosis at the 95% level",
+        }[status],
+        "prediction": pred_name,
+        "confidence": round(confidence, 4),
+        "prediction_set_95": pred_set,
+        "class_probabilities": {n: round(float(p), 4) for n, p in zip(classes, probs)},
+        "severity": severity,
+        "disease_presence": {d: round(float(p), 4) for d, p in zip(DISEASES, pres)},
+        "other_findings": others,
+        "ood_score": round(ood, 2),
+        "ood_threshold": round(float(c["ood_threshold"]), 2),
+    }
 
 
 def _pretty(name: str) -> str:

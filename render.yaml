@@ -2,7 +2,16 @@ services:
   - type: web
     name: plant-disease-api
     runtime: python
-    plan: starter
-    buildCommand: pip install -r requirements.txt
+    plan: free  # 512 MB RAM, 0.1 CPU: the ONNX backend (no PyTorch), one network loaded at a time
+    buildCommand: pip install -r requirements-deploy.txt && python src/fetch_models.py
     startCommand: uvicorn src.api:app --host 0.0.0.0 --port $PORT --workers 1
     healthCheckPath: /health
+    envVars:
+      - key: PLANT_BACKEND
+        value: onnx
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: MODELS_URL
+        value: https://github.com/sohamnetic/Plant_disease/releases/download/models-v1/deploy_models.zip
+      - key: MODELS_SHA256
+        value: f49fdbbc67c29066ed34219541dc49c8f8812921a3fc2ef53179039ef4fa4e8d

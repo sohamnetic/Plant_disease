@@ -48,7 +48,6 @@ import sys
 from pathlib import Path
 
 import numpy as np
-import torch
 from PIL import Image, ImageDraw, ImageOps
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -63,8 +62,7 @@ from model_runtime import (
 )
 from seg_runtime import DEFAULT_HOLE_WEIGHTS, DEFAULT_WEIGHTS, STAGES, WORK_SIDE, SegEngine, overlay
 from advice import advice_for
-from cauliflower_gate import CauliflowerGate
-from v2_model import FILL, GRADE_LABELS
+from v2_common import FILL, GRADE_LABELS
 
 POLICY_FILE = Path(__file__).resolve().parent / "phase4_policy.json"
 DEFAULT_POLICY = {"seg_veto": True, "grade_check": True}
@@ -94,8 +92,10 @@ def _bbox(mask: np.ndarray) -> tuple[int, int, int, int]:
 
 class PlantEngine:
     def __init__(self, exp_dir: Path = DEFAULT_EXP, seg_weights: Path = DEFAULT_WEIGHTS,
-                 device: torch.device | None = None, seg_device: str = "cpu", policy: dict | None = None,
+                 device: "torch.device | None" = None, seg_device: str = "cpu", policy: dict | None = None,
                  use_gate: bool = True, insect_exp: Path | None = DEFAULT_INSECT_EXP):
+        from cauliflower_gate import CauliflowerGate
+
         self.cls = V2Engine(exp_dir, device=device)
         # second opinion only when the main classifier has no insect class
         use_insect = insect_exp is not None and INSECT not in self.cls.classes and (Path(insect_exp) / "calibration.json").is_file()
@@ -109,9 +109,19 @@ class PlantEngine:
         self.device = self.cls.device
         self.policy = policy or load_policy()
 
+    @classmethod
+    def from_engines(cls, classifier, seg, gate=None, insect_cls=None, policy: dict | None = None) -> "PlantEngine":
+        """Same decisions from engines built elsewhere (the ONNX deployment, src/onnx_runtime.py)."""
+        self = cls.__new__(cls)
+        self.cls, self.seg, self.gate, self.insect_cls = classifier, seg, gate, insect_cls
+        self.classes = classifier.classes
+        self.checkpoints = (classifier.checkpoints + (insect_cls.checkpoints if insect_cls else []) + seg.checkpoints)
+        self.device = "cpu"
+        self.policy = policy or load_policy()
+        return self
+
     def _classify(self, ims: list[Image.Image]) -> list[dict]:
-        x = torch.stack([self.cls.tfm(im) for im in ims])
-        raw = self.cls.forward_batch(x)
+        raw = self.cls.forward_images(ims)
         return [self.cls.interpret(raw, i, []) for i in range(len(ims))]
 
     # ------------------------------------------------------------------ analyse
@@ -156,7 +166,7 @@ class PlantEngine:
         results = self._classify(crops)
         insect_whole = None
         if self.insect_cls is not None:
-            raw = self.insect_cls.forward_batch(self.insect_cls.tfm(im).unsqueeze(0))
+            raw = self.insect_cls.forward_images([im])
             insect_whole = self.insect_cls.interpret(raw, 0, [])
         parts = []
         for i, r in enumerate(m["regions"]):

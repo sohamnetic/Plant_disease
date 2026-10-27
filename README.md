@@ -24,6 +24,8 @@ The image **dataset is not in this repo** (too large). Training/eval expect a lo
 
 ## Inference API
 
+**Deploying on Render free (512 MB):** the same models run as ONNX without PyTorch (`PLANT_BACKEND=onnx`, about 340 MB peak, identical answers on 100 test photos). Steps and the API guide for integrating it are in [`DEPLOY.md`](DEPLOY.md).
+
 ```bash
 pip install -r requirements.txt
 python -m uvicorn src.api:app --host 0.0.0.0 --port 8000 --workers 1

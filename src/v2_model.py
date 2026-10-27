@@ -26,32 +26,19 @@ from PIL import Image, ImageDraw, ImageFilter, ImageOps
 from torchvision import transforms
 from torchvision.models import EfficientNet_B0_Weights, efficientnet_b0
 
-CLASS_ORDER = ["bacterial_spot_rot", "black_rot", "downy_mildew", "no_disease"]
-DISEASES = CLASS_ORDER[:3]
-NO_DISEASE_IDX = 3
-NUM_GRADES = 5
-GRADE_LABELS = ["none", "early", "moderate", "severe", "critical"]
-# Same scale as src/stages.json and the measured grades (Phase 5).
-GRADE_MEANING = [
-    "no visible symptoms",
-    "<5% of the worst leaf/head affected, or a few small spots",
-    "5-25% of the worst leaf/head affected",
-    "25-50% of the worst leaf/head affected",
-    ">50% affected or tissue collapse",
-]
-IMAGE_SIZE = 384
-IMAGENET_MEAN = (0.485, 0.456, 0.406)
-IMAGENET_STD = (0.229, 0.224, 0.225)
-FILL = tuple(int(m * 255) for m in IMAGENET_MEAN)
-
-
-def letterbox(im: Image.Image) -> Image.Image:
-    """Pad to a square with ImageNet-mean colour; keeps the whole frame."""
-    w, h = im.size
-    side = max(w, h)
-    canvas = Image.new("RGB", (side, side), FILL)
-    canvas.paste(im, ((side - w) // 2, (side - h) // 2))
-    return canvas
+from v2_common import (  # noqa: F401  (re-exported: older code imports them from here)
+    CLASS_ORDER,
+    DISEASES,
+    FILL,
+    GRADE_LABELS,
+    GRADE_MEANING,
+    IMAGE_SIZE,
+    IMAGENET_MEAN,
+    IMAGENET_STD,
+    NO_DISEASE_IDX,
+    NUM_GRADES,
+    letterbox,
+)
 
 
 class Letterbox:
