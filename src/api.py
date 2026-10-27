@@ -303,8 +303,16 @@ def health() -> dict:
         "severity_grades": {g: f"{GRADE_LABELS[g]}: {GRADE_MEANING[g]}" for g in range(len(GRADE_LABELS))},
         "device": str(engine.device),
         "backend": BACKEND,
+        "memory_mb": _memory(),
         "retrains": False,
     }
+
+
+def _memory() -> dict | None:
+    if BACKEND != "onnx":
+        return None
+    from onnx_runtime import memory_mb
+    return memory_mb()
 
 
 @app.post("/predict")
@@ -321,7 +329,9 @@ async def predict(file: UploadFile = File(...)) -> dict:
 
 def _predict_locked(engine: PlantEngine, im: Image.Image, with_overlay: bool = True) -> dict:
     with PREDICT_LOCK:
-        return plant_public_result(engine.predict_pil(im, with_overlay=with_overlay))
+        out = plant_public_result(engine.predict_pil(im, with_overlay=with_overlay))
+        print("predict done, memory MB:", _memory(), flush=True)
+        return out
 
 
 async def read_image(file: UploadFile) -> Image.Image:

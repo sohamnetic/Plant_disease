@@ -52,6 +52,42 @@ CLIP_SPLIT = "/m/vision_model/encoder/layers.11/Add_1_output_0"  # hidden state 
 CHUNK = 2  # photos per classifier run (4 views with the flip): keeps activations small
 
 
+def _libc():
+    """glibc keeps freed memory inside the process; on Linux (Render) loading one model after
+    another then grows the process past 512 MB. Big buffers are made to go straight back to
+    the OS (fixed mmap threshold), and leftovers are trimmed after every model."""
+    if not sys.platform.startswith("linux"):
+        return None
+    try:
+        import ctypes
+
+        libc = ctypes.CDLL("libc.so.6")
+        libc.mallopt(-3, 64 * 1024)  # M_MMAP_THRESHOLD (fixed, so glibc stops raising it)
+        libc.mallopt(-8, 2)  # M_ARENA_MAX
+        return libc
+    except (OSError, AttributeError):
+        return None
+
+
+LIBC = _libc()
+
+
+def _release() -> None:
+    gc.collect()
+    if LIBC is not None:
+        LIBC.malloc_trim(0)
+
+
+def memory_mb() -> dict | None:
+    """Current and peak memory of this process (Linux only), for /health."""
+    try:
+        status = Path("/proc/self/status").read_text()
+    except OSError:
+        return None
+    kb = {ln.split(":")[0]: int(ln.split()[1]) for ln in status.splitlines() if ln.startswith(("VmRSS", "VmHWM"))}
+    return {"now": round(kb["VmRSS"] / 1024), "peak": round(kb["VmHWM"] / 1024)}
+
+
 def _session(path: Path):
     import onnxruntime as ort
 
@@ -69,7 +105,7 @@ def _run(path: Path, feeds: dict) -> list[np.ndarray]:
         return s.run(None, feeds)
     finally:
         del s
-        gc.collect()
+        _release()
 
 
 # ---------------------------------------------------------------- classifier
@@ -106,8 +142,8 @@ class OnnxClassifier:
                 for name, v in zip(("cls", "presence", "sev", "feat"), s.run(None, {"x": np.ascontiguousarray(views)})):
                     outs[name].append((v[:k] + v[k:]) / 2)
             del s
-            gc.collect()
-            o = {k: np.concatenate(v) for k, v in outs.items()}
+            _release()
+            o ={k: np.concatenate(v) for k, v in outs.items()}
             z = (o["feat"] - st["mu"]) @ st["comps"].T
             dlt = z[:, None, :] - st["means"][None]
             o["maha"] = np.einsum("nci,ij,ncj->nc", dlt, st["prec"], dlt).min(1)
